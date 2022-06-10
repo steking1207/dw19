@@ -1,0 +1,58 @@
+@@include('../partial/global/_head.html',{
+    title:'OTP Verification'
+})
+    <body id="top">
+        @@include('../partial/global/_header-admin.html',{
+            state:'login',
+            title:'OTP Verification',
+        })
+        <main>
+            <div class="py-80">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-4">
+                            <div class="h5 text-center mb-28">
+                                Enter OTP
+                            </div>
+                            <p class="text-center m-0">
+                                OTP has been sent to your phone<br>
+                                065*****14, please enter it to verify.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center my-40">
+                        <div class="col-12 col-lg-4">
+                            <div class="d-flex gap-16 mb-16">
+                                <input type="text" class="form-control form-control-lg text-center rounded input-otp" maxlength="1">
+                                <input type="text" class="form-control form-control-lg text-center rounded input-otp" maxlength="1">
+                                <input type="text" class="form-control form-control-lg text-center rounded input-otp" maxlength="1">
+                                <input type="text" class="form-control form-control-lg text-center rounded input-otp" maxlength="1">
+                                <input type="text" class="form-control form-control-lg text-center rounded input-otp" maxlength="1">
+                                <input type="text" class="form-control form-control-lg text-center rounded input-otp" maxlength="1">
+                            </div>
+                            <div class="h2 text-center text-danger m-0">
+                                03:00
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-4">
+                            <form>
+                                <p class="text-center">
+                                    Didn't receive OTP? <br><a href="#">Resend OTP</a> or <a href="#">Change Phone Number</a>
+                                </p>
+                                @@include('../partial/unit/_btn-form.html',{
+                                    col:'-12',
+                                    href:'#',
+                                    label:'Continue'
+                                })
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- global -->
+        @@include('../partial/global/_js.html')
+    </body>
+</html>

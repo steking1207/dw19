@@ -1,0 +1,66 @@
+@@include('../partial/global/_head.html',{
+    title:'Regist'
+})
+    <body id="top">
+        @@include('../partial/global/_header-admin.html',{
+            state:'regist',
+            title:'Register to DW19 Membership',
+        })
+        <main>
+            <div class="py-80">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-4">
+                            <div class="h5 text-center mb-28">
+                                Already have account? <a href="login.html">Login</a>
+                            </div>
+                            <div class="d-grid gap-28">
+                                @@include('../partial/unit/_btn-log.html',{
+                                    brand:'google',
+                                    href:'#',
+                                    img:'/assets/img/ui/icon-btn-google.svg',
+                                    label:'Register Using Google'
+                                })
+                                @@include('../partial/unit/_btn-log.html',{
+                                    brand:'facebook',
+                                    href:'#',
+                                    img:'/assets/img/ui/icon-btn-facebook.svg',
+                                    label:'Register Using Facebook'
+                                })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center my-40">
+                        <div class="col-12 col-lg-6 text-center">
+                            <div class="mb-28">or</div>
+                            <div class="border-cross">
+                                <span>Join using Phone number + Email</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-4">
+                            <div class="row g-16 mb-40">
+                                @@include('../partial/comp/_forms.html',{
+                                    group: {
+                                        item: [
+                                            {col:'-12', required:true, id:'inputPhone', type:'number', prefixLabel:'+66', label:'Phone Number', placeholder:'eg. 0809999999',},
+                                            {col:'-12', required:true, id:'inputEmail', type:'email', label:'Email', placeholder:'eg. dw19@gmail.com',},
+                                        ],
+                                    },
+                                })
+                            </div>
+                            @@include('../partial/unit/_btn-form.html',{
+                                col:'-12',
+                                href:'regist-form.html',
+                                label:'Join'
+                            })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- global -->
+        @@include('../partial/global/_js.html')
+    </body>
+</html>

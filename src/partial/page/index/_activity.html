@@ -1,0 +1,42 @@
+<div class="section-activity bg-light" id="activity">
+    <div class="container py-80">
+        @@include('../../unit/_section-title.html',{
+            title1:'Activity & ',
+            title2:'Promotion',
+        })
+        <div class="row my-36">
+            @@loop('../../unit/_activity-item.html', [
+                {
+                    img: '/assets/img/uploads/img-act-01.jpg',
+                    href: '#',
+                    date: '2022.03.02',
+                    title: 'Amazon sell-off ends dismal month for US shares',
+                    desc: 'A sell-off in Amazon shares, after the firm reported a fall in online sales, helped drive the Nasdaq index down more than 4% on Friday.',
+                },
+                {
+                    img: '/assets/img/uploads/img-act-02.jpg',
+                    href: '#',
+                    date: '2022.03.02',
+                    title: 'Amazon sell-off ends dismal month for US shares',
+                    desc: 'A sell-off in Amazon shares, after the firm reported a fall in online sales, helped drive the Nasdaq index down more than 4% on Friday.',
+                },
+                {
+                    img: '/assets/img/uploads/img-act-03.jpg',
+                    href: '#',
+                    date: '2022.03.02',
+                    title: 'Amazon sell-off ends',
+                    desc: 'A sell-off in Amazon shares, after the firm reported a fall in online sales, helped drive the Nasdaq index down more than 4% on Friday.',
+                },
+                {
+                    img: '/assets/img/uploads/img-act-04.jpg',
+                    href: '#',
+                    date: '2022.03.02',
+                    title: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit',
+                    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare ut nunc in hendrerit. Donec viverra nulla augue, vitae tempus diam elementum ut. Phasellus et rutrum metus, id tempus ante. Cras nulla elit, tempor id elit vel, consequat rhoncus libero. Sed velit elit, aliquet non tellus eget, mollis faucibus quam. Curabitur quis est pharetra tellus commodo luctus id non felis. Sed venenatis purus arcu, vitae semper erat sollicitudin eget. Quisque a odio diam. Nunc eu turpis commodo, laoreet tellus in, scelerisque tellus. Proin posuere in est sed pharetra. Aenean euismod rhoncus ante eu vestibulum. Aliquam gravida feugiat lorem, sed vehicula lorem aliquam auctor. Fusce eu erat interdum, suscipit mauris et, vestibulum risus. Nullam rhoncus vitae magna vel consequat. Sed non iaculis velit, a consequat turpis. Curabitur faucibus commodo justo a malesuada.',
+                },
+            ])
+        </div>
+        @@include('../../unit/_btn-more.html')
+        <div class="rect rect-activity"></div>
+    </div>
+</div>

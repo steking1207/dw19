@@ -1,0 +1,48 @@
+.nav-main {
+    @include media-breakpoint-down(xl) {
+        position: absolute;
+        flex-direction: column;
+        height: 100vh !important;
+    }
+    .navbar-nav {
+        .nav-item {
+            border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+            &:last-child,
+            &:only-child {
+                border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+            }
+        }
+        @include media-breakpoint-up(xl) {
+            .nav-item {
+                border-top: 0 !important;
+                border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+                &:last-child,
+                &:only-child {
+                    border: 0 !important;
+                }
+            }
+        }
+    }
+}
+// @media (max-width: 992px) {
+//     .navbar-collapse {
+//         position: fixed;
+//         top: 80px;
+//         left: 0;
+//         width: 100%;
+//     }
+
+//     .navbar-collapse.collapsing {
+//         left: -100%;
+//         transition: height 0s ease;
+//     }
+
+//     .navbar-collapse.show {
+//         left: 0;
+//         transition: left 300ms ease-in-out;
+//     }
+
+//     .navbar-toggler.collapsed ~ .navbar-collapse {
+//         transition: left 500ms ease-in-out;
+//     }
+// }

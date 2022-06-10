@@ -1,0 +1,45 @@
+<div class="bg-light" id="missions">
+    <div class="container py-80">
+        @@include('../../unit/_section-title.html',{
+            title1:'Ongoing ',
+            title2:'Missions',
+        })
+        <div class="row my-36">
+            @@loop('../../unit/_mission-item.html', [
+                {
+                    img:'https://via.placeholder.com/70x70',
+                    title:'Mission Name Mission Name',
+                    desc:'Mission description Lorem Mission description Mission descriptionMission description',
+                    progress:'25',
+                    pts:'18',
+                    state:'In Program'
+                },
+                {
+                    img:'https://via.placeholder.com/180x70/fc0',
+                    title:'Send Your Name to Space',
+                    desc:'Artemis is the name of NASAs program to return astronauts to the lunar surface.',
+                    progress:'80',
+                    pts:'50',
+                    state:'In Program'
+                },
+                {
+                    img:'https://via.placeholder.com/300x300/8bb',
+                    title:'Send Your Name to Space',
+                    desc:'Artemis is the name of NASAs program to return astronauts to the lunar surface.',
+                    progress:'100',
+                    pts:'25',
+                    state:'In Program'
+                },
+                {
+                    img:'https://via.placeholder.com/90x200/0fc',
+                    title:'Send Your Name to Space',
+                    desc:'Artemis is the name of NASAs program to return astronauts to the lunar surface.',
+                    progress:'0',
+                    pts:'10',
+                    state:'In Program'
+                },
+            ])
+        </div>
+        @@include('../../unit/_btn-more.html')
+    </div>
+</div>

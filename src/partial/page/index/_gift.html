@@ -1,0 +1,27 @@
+<div id="gift">
+    <div class="container py-80">
+        @@include('../../unit/_section-title.html',{
+            title1:'G',
+            title2:'ift',
+        })
+        <div class="my-48">
+            <div class="swiper swiper-product">
+                <div class="swiper-wrapper">
+                    @@loop('../../unit/_product-list-item.html', [
+                        {img: '/assets/img/uploads/prod-01.jpg', title: 'Apple Watch Series 7', point: '60,000'},
+                        {img: '/assets/img/uploads/prod-02.jpg', title: 'Roborock S7 MaxV Ultra Vacuum cleaner', point: '80,000'},
+                        {img: '/assets/img/uploads/prod-03.jpg', title: 'Nespresso Original Oster Coffee Machine', point: '30,000'},
+                        {img: '/assets/img/uploads/prod-04.jpg', title: 'NBezalel Futura Turbo 10W', point: '10,000'},
+                        {img: '/assets/img/uploads/prod-05.jpg', title: '422 AIR FRYER AF13L', point: '90,000'},
+                        {img: '/assets/img/uploads/prod-06.jpg', title: '【recolte】Clair quick cooker', point: '40,000'},
+                        {img: '/assets/img/uploads/prod-07.jpg', title: '【Panasonic】ion hair dryer', point: '20,000'},
+                        {img: '/assets/img/uploads/prod-08.jpg', title: 'ARTISAN Ceramic heater', point: '13,000'},
+                    ])
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        @@include('../../unit/_btn-more.html')
+    </div>
+</div>

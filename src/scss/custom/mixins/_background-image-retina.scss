@@ -1,0 +1,32 @@
+$retina_2x: "only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 1.25dppx), only screen and (min-resolution: 2dppx)";
+
+@mixin retina-2x-background-image($file, $type, $width, $height) {
+    background-image: url($file + '.' + $type);
+    @media #{$retina_2x} {
+        background-image: url($file + '@2x.' + $type);
+        background-size: $width, $height;
+    }
+}
+
+$retina_3x: "only screen and (-webkit-min-device-pixel-ratio: 2.25), only screen and (min--moz-device-pixel-ratio: 2.25), only screen and (-o-min-device-pixel-ratio: 9/4), only screen and (min-device-pixel-ratio: 2.25), only screen and (min-resolution: 2.25dppx), only screen and (min-resolution: 2dppx)";
+
+@mixin retina-3x-background-image($file, $type, $width, $height) {
+    //background-image: url($file + '.' + $type);
+    @media #{$retina_3x} {
+        background-image: url($file + '@3x.' + $type);
+        background-size: $width, $height;
+    }
+}
+
+
+@mixin retina-2x-3x-background-image($file, $type, $width, $height) {
+    background-image: url($file + '.' + $type);
+    @media #{$retina_2x} {
+        background-image: url($file + '@2x.' + $type);
+        background-size: $width, $height;
+    }
+    @media #{$retina_3x} {
+        background-image: url($file + '@3x.' + $type);
+        background-size: $width, $height;
+    }
+}

@@ -1,0 +1,10 @@
+.bg-admin {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bg-regist {
+    background-image: url(#{$path-ui}bg-header-regist.png)
+}
+.bg-login {
+    background-image: url(#{$path-ui}bg-header-login.png)
+}

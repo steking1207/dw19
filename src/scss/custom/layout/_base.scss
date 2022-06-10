@@ -1,0 +1,49 @@
+body {
+    &.scroll-hidden {
+        overflow: hidden;
+    }
+}
+
+.container {
+    position: relative;
+}
+.section-benefit {
+    background: url(#{$path-ui}bg-dw.svg) no-repeat;
+    
+    @include media-breakpoint-down(lg) {
+        background-size: 100%;
+        background-position: right bottom;
+    }
+    @include media-breakpoint-up(lg) {
+        background-size: auto;
+        background-position: 110% 0;
+    }
+}
+.section-learn {
+    background: url(#{$path-ui}bg-learn.jpg) no-repeat #2c6a8f;
+    background-size: cover;
+    background-position: 90% 0;
+    @include media-breakpoint-up(lg) {
+        background-position: 100% 0;
+    }
+}
+.section-sitemap {
+    background-color: $cr-ci-dark;
+}
+.section-copyright {
+    background-color: $cr-ci-darker;
+}
+.rect {
+    position: absolute;
+    bottom: -44px;
+    display: block;
+    width: 70px;
+    height: 88px;
+    background: $cr-ci-normal;
+    &.rect-benefit {
+        left: 15%;
+    }
+    &.rect-activity {
+        left: 55%;
+    }
+}

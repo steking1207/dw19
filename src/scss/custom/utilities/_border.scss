@@ -1,0 +1,27 @@
+// @include media-breakpoint-up(lg) {
+//     .border-lg-end {
+//         border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+//     }
+// }
+.border-cross {
+    position: relative;
+    span {
+        position: relative;
+        z-index: 1;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        background-color: $white;
+        
+    }
+    &:after {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        z-index: 0;
+        margin-top: -1px;
+        height: 1px;
+        background-color: $gray-500;
+        content: '';
+    }
+}

@@ -1,0 +1,22 @@
+@@include('../partial/global/_head.html',{title:''})
+    <body id="top">
+        @@include('../partial/global/_header.html',{
+            state:'login',
+            nav1Label:'DW19 Membership Benefit',
+            nav2Label:'Promotion',
+            nav3Label:'Learn About DW',
+            nav4Label:'Check Gift',
+        })
+        <main>
+            @@include('../partial/page/index/_kv.html')
+            @@include('../partial/page/index/_benefit.html')
+            @@include('../partial/page/index/_activity.html')
+            @@include('../partial/page/index/_gift.html')
+            @@include('../partial/page/index/_learn.html')
+        </main>
+        @@include('../partial/global/_footer.html')
+        @@include('../partial/comp/_quicknav.html')
+        <!-- global -->
+        @@include('../partial/global/_js.html')
+    </body>
+</html>

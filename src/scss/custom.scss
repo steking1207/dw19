@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+
+// Bootstrap
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+// Mixin
+@import "custom/mixins/mixins";
+@import "custom/config/variables";
+
+// Layout
+@import "custom/layout/base";
+
+// Content
+@import "custom/content/type";
+@import "custom/content/images";
+
+// Components
+@import "custom/components/buttons";
+@import "custom/components/card";
+@import "custom/components/nav";
+
+// Utilities
+@import "custom/utilities/background";
+@import "custom/utilities/border";
+@import "custom/utilities/position";
+@import "custom/utilities/sizing";
+@import "custom/utilities/spacing";
+
+// Plugin
+@import "plugin/ofi";
+@import "plugin/swiper/swiper";

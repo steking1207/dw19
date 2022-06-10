@@ -1,0 +1,31 @@
+body {
+    letter-spacing: 0.03em;
+}
+.fs-small {
+    font-size: $small-font-size;
+}
+.text-ci-dark {
+    color: $cr-ci-dark;
+}
+[class^="text-row-"],
+[class*="text-row-"] {
+    text-overflow:ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.text-row-1 {
+    -webkit-line-clamp: 1;
+}
+.text-row-2 {
+    -webkit-line-clamp: 2;
+}
+.text-row-3 {
+    -webkit-line-clamp: 3;
+}
+.text-nowrap {
+    &.overflow-hidden {
+        width: 6rem;
+        text-overflow: ellipsis;
+    }
+}

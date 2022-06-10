@@ -1,0 +1,89 @@
+.btn-bd-white-lg {
+    --bs-btn-padding-x: #{$spacer * 2};
+    --bs-btn-padding-y: #{$spacer * 1};
+    --bs-btn-font-size: #{$h4-font-size};
+    --bs-btn-font-weight: 700;
+    --bs-btn-color: #{shade-color($primary, 30%)};
+    --bs-btn-bg: var(--bs-white);
+    --bs-btn-hover-color: var(--bs-btn-color);
+    --bs-btn-hover-bg: #{shade-color($white, 15%)};
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: var(--bs-btn-hover-bg);
+    --bs-btn-border-width: 0;
+}
+.btn-join {
+    background-color: $cr-ci-normal;
+    &:hover,
+    &:focus {
+        background-color: $cr-ci-dark;
+    }
+}
+
+// styling of hamburger menu
+.hamburger-menu {
+    position: relative;
+	width: $hamburger-menu-size;
+	height: $hamburger-menu-size;
+    border: 0;
+    span {
+        margin: 0 auto;
+        position: relative;
+        top: 14px;
+        transition-duration:0s;
+        transition-delay:0.2s;
+        &:before,
+        &:after {
+            position: absolute;
+            content: '';
+            transition-property:margin, transform;
+            transition-duration:0.2s;
+            transition-delay:0.2s, 0s;
+        }
+        &:before {
+            margin-top: -12px;
+        }
+        &:after {
+            margin-top: 12px;
+        }
+    }
+    span,
+    span:before,
+    span:after {
+        width: $hamburger-menu-size;
+        height: 4px;
+        background-color: $dark;
+        display: block;
+    }
+    &.active {
+        span {
+            background-color: rgba($black,0);
+            transition-delay:0.2s;
+            &:before,
+            &:after {
+                margin-top: 0;
+                transition-delay:0s, 0.2s;
+            }
+            &:before {
+                transform:rotate(45deg);
+            }
+            &:after {
+                transform:rotate(-45deg);
+            }
+        }
+    }
+}
+
+.btn-facebook {
+    background-color: $color-facebook;
+    &:hover,
+    &:focus {
+        background-color: darken($color-facebook,10%);
+    }
+}
+.btn-google {
+    background-color: $color-google;
+    &:hover,
+    &:focus {
+        background-color: darken($color-google,10%);
+    }
+}

@@ -1,0 +1,21 @@
+.h-row-2 {
+    height: 3em;
+}
+.h-220 {
+    height: 220px !important;
+    
+}
+.ratio-3x1 {
+    --bs-aspect-ratio: 100%;
+    @include media-breakpoint-up(lg) {
+        --bs-aspect-ratio: 33%;
+    }
+}
+.wh-40 {
+    width: 40px !important;
+    height: 40px !important;
+}
+.wh-80 {
+    width: 80px !important;
+    height: 80px !important;
+}

@@ -14,36 +14,40 @@ const webp = require('gulp-webp');
 const uglify = require('gulp-uglify');
 const ghPages = require('gulp-gh-pages');
 
+const merge = require('merge-stream');
+const CONFIGS = [
+  require('./gulp.config.web')
+];
+
 const paths = {
   html: {
     src: 'src/html/**/*.html',
-    dest: 'output/'
+    dest: 'dist/'
   },
   partial_html: {
     src: 'src/partial/**/*.html',
-    dest: 'output/'
+    dest: 'dist/'
   },
   css: {
     src: 'src/scss/**/*.scss',
-    dest: 'output/assets/stylesheets'
+    // dest: 'dist/web/assets/css'
   },
   scripts: {
-    src: 'src/javascripts/**/*.js',
-    dest: 'output/assets/javascripts'
+    src: 'src/js/**/*.js',
+    // dest: 'dist/web/assets/js'
   },
   media: {
-    src: 'src/images/**/*.{jpg,png,svg,json}',
-    dest: 'output/assets/images'
+    src: 'src/img/**/*.{jpg,png,svg,json}',
+    // dest: 'dist/web/assets/img'
   },
   assets: {
     src: 'src/assets/**/*.{jpg,png,svg}',
-    dest: 'output/assets'
+    dest: 'dist/assets'
   }
 };
 
 
 function clean(cb) {
-
   cb();
 }
 
@@ -60,13 +64,57 @@ function html(cb) {
         .pipe(dest(paths.html.dest))
 }
 
-
 function css(cb) {
-  return src(paths.css.src)
-        .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer())
-        .pipe(dest(paths.css.dest))
+  const tasks = CONFIGS.map(config => {
+      return gulp.src(config.css.sourcePaths)
+          .pipe(sass().on('error', sass.logError))
+          .pipe(autoprefixer())
+          .pipe(gulp.dest(config.css.exportPath))
+  });
+  return merge(tasks);
 }
+
+function cssMin(cb) {
+  const tasks = CONFIGS.map(config => {
+      return gulp.src(config.css.sourcePaths)
+          .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+          .pipe(autoprefixer())
+          .pipe(gulp.dest(config.css.exportPath))
+  });
+  return merge(tasks);
+}
+
+function js(cb) {
+  const tasks = CONFIGS.map(config => {
+      return gulp.src(config.scripts.sourcePaths)
+          .pipe(gulp.dest(config.scripts.exportPath))
+  });
+  return merge(tasks);
+}
+
+function jsMin(cb) {
+  const tasks = CONFIGS.map(config => {
+      return gulp.src(config.scripts.sourcePaths)
+          .pipe(uglify())
+          .pipe(gulp.dest(config.scripts.exportPath))
+  });
+  return merge(tasks);
+}
+
+function media(cb) {
+  const tasks = CONFIGS.map(config => {
+      return gulp.src(config.media.sourcePaths)
+          .pipe(gulp.dest(config.media.exportPath))
+  });
+  return merge(tasks);
+}
+
+// function css(cb) {
+//   return src(paths.css.src)
+//         .pipe(sass().on('error', sass.logError))
+//         .pipe(autoprefixer())
+//         .pipe(dest(paths.css.dest))
+// }
 
 function cssMin(cb) {
   return src(paths.css.src)
@@ -75,29 +123,30 @@ function cssMin(cb) {
         .pipe(dest(paths.css.dest))
 }
 
-function js(cb) {
-  return src(paths.scripts.src) // src() can also be placed in the middle of a pipeline to add files to the stream based on the given globs.
-    .pipe(dest(paths.scripts.dest)); // dest() is given an output directory string
+// function js(cb) {
+//   return src(paths.scripts.src) // src() can also be placed in the middle of a pipeline to add files to the stream based on the given globs.
+//     .pipe(dest(paths.scripts.dest)); // dest() is given an output directory string
 
-}
+// }
 
-function jsMin(){
-  return src(paths.scripts.src) // src() can also be placed in the middle of a pipeline to add files to the stream based on the given globs.
-    // .pipe(minify({
-    //     ext:{
-    //         src:'-debug.js',
-    //         min:'.js'
-    //     },
-    //     exclude: ['tasks'],
-    //     ignoreFiles: ['.min.js','.combo.js', '-min.js']
-    // }))
-    .pipe(uglify())
-    .pipe(dest(paths.scripts.dest)); // dest() is given an output directory string
-}
-function media(cb) {
-  return src(paths.media.src) // src() can also be placed in the middle of a pipeline to add files to the stream based on the given globs.
-    .pipe(dest(paths.media.dest)); // dest() is given an output directory string
-}
+// function jsMin(){
+//   return src(paths.scripts.src) // src() can also be placed in the middle of a pipeline to add files to the stream based on the given globs.
+//     // .pipe(minify({
+//     //     ext:{
+//     //         src:'-debug.js',
+//     //         min:'.js'
+//     //     },
+//     //     exclude: ['tasks'],
+//     //     ignoreFiles: ['.min.js','.combo.js', '-min.js']
+//     // }))
+//     .pipe(uglify())
+//     .pipe(dest(paths.scripts.dest)); // dest() is given an output directory string
+// }
+
+// function media(cb) {
+//   return src(paths.media.src) // src() can also be placed in the middle of a pipeline to add files to the stream based on the given globs.
+//     .pipe(dest(paths.media.dest)); // dest() is given an output directory string
+// }
 
 function assets(cb) {
   return src(paths.assets.src) // src() can also be placed in the middle of a pipeline to add files to the stream based on the given globs.
@@ -110,21 +159,21 @@ function assets(cb) {
 // 圖片一般格式壓縮
 
 function compressImage() {
-  return src(['output/media/img/**/*.{jpg,png,svg}'])
+  return src(['dist/media/img/**/*.{jpg,png,svg}'])
       .pipe(imagemin())
-      .pipe(dest('output/img-opt/'));
+      .pipe(dest('dist/img-opt/'));
 }
 
 function generateWebp() {
-  return src(['output/media/img/**/*.{jpg,png,svg}'])
+  return src(['dist/media/img/**/*.{jpg,png,svg}'])
     .pipe(webp())
-    .pipe(dest('output/img-opt/'));
+    .pipe(dest('dist/img-opt/'));
 }
 
 function watchFiles() {  
   browserSync.init({
     server: {
-      baseDir: "./output",
+      baseDir: "./dist",
       index: "/index.html"
     }
   }); 
@@ -160,9 +209,8 @@ exports.build = build;
 exports.default = default_build;
 
 gulp.task('deploy', function() {
-  return gulp.src('./output/**/*')
+  return gulp.src('./dist/**/*')
     .pipe(ghPages({
-      // origin:'SOGI-preview',
       message: 'Update ' + new Date().toLocaleString('zh-TW', {timeZone: 'Asia/Taipei'})
     }));
 });

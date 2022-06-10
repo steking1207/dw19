@@ -1,0 +1,143 @@
+@@include('../partial/global/_head.html',{
+    title:'Regist'
+})
+    <body id="top">
+        @@include('../partial/global/_header-admin.html',{
+            state:'regist',
+            title:'Register to DW19 Membership',
+        })
+        <main>
+            <div class="py-80">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-10">
+                            <div class="row g-16 mb-40">
+                                @@include('../partial/comp/_forms.html',{
+                                    tip:true,
+                                    group: {
+                                        item: [
+                                            {col:'-12', colLg:'-6', id:'inputFName', type:'text', label:'First Name', placeholder:'',},
+                                            {col:'-12', colLg:'-6', id:'inputLName', type:'text', label:'Last Name', placeholder:'',},
+                                        ],
+                                        tip: [
+                                            {desc:"Thai citizen, please fill in thai language and name on ID card only and foreign people, please fill in english language and name on passport only."},
+                                            {desc:"Name can't be changed unless call staff to change manually and point data might be cleared."},
+                                        ],
+                                    },
+                                })
+                                <div class="w-100"></div>
+                                @@include('../partial/comp/_forms.html',{
+                                    tip:true,
+                                    group: {
+                                        item: [
+                                            {col:'-12', colLg:'-6', id:'inputId', type:'text', label:'Citizen ID or Passport', placeholder:'',},
+                                            {col:'-12', colLg:'-6', id:'inputBirth', type:'date', label:'Date of Birth', placeholder:'',},
+                                        ],
+                                        tip: [
+                                            {desc:"Citizen ID or Passport and date of birth can't be changed unless call staff to change manually and old point data might be cleared."},
+                                        ],
+                                    },
+                                })
+                                <div class="w-100"></div>
+                                @@include('../partial/comp/_forms.html',{
+                                    group: {
+                                        item: [
+                                            {col:'-12', colLg:'-4', id:'inputPhone', type:'number', prefixLabel:'+66', label:'Phone Number', placeholder:'eg. 0809999999', href:'#'},
+                                            {col:'-12', colLg:'-4', id:'inputEmail', type:'email', label:'Email', placeholder:'eg. dw19@gmail.com', href:'#'},
+                                            {col:'-12', colLg:'-4', id:'inputGender', type:'select', label:'Gender', placeholder:'', opt1:'Choose...', opt2:'Male', opt3:'Female'},
+                                        ],
+                                    },
+                                })
+                                <div class="w-100"></div>
+                                @@include('../partial/comp/_forms.html',{
+                                    group: {
+                                        item: [
+                                            {
+                                                col:'-12', colLg:'-4',
+                                                id:'inputPlace',
+                                                type:'select',
+                                                label:'Address',
+                                                opt1:'Thailand', opt2:'Other',
+                                                value1:'thailand', value2:'other'
+                                            },
+                                            {
+                                                col:'-6', colLg:'-4',
+                                                id:'inputSubDistrict', class:'select-change thailand',
+                                                type:'select',
+                                                label:'&nbsp;', labelRwd:true,
+                                                opt1:'Sub-district'
+                                            },
+                                            {
+                                                col:'-6', colLg:'-4',
+                                                id:'inputDistrict', class:'select-change thailand',
+                                                type:'select',
+                                                label:'&nbsp;', labelRwd:true,
+                                                opt1:'District'
+                                            },
+                                            {
+                                                col:'-6', colLg:'-3',
+                                                id:'inputProvince', class:'select-change thailand',
+                                                type:'select',
+                                                opt1:'Province'
+                                            },
+                                            {
+                                                col:'-6', colLg:'-3',
+                                                id:'inputZip', class:'select-change thailand',
+                                                type:'select',
+                                                opt1:'Zip Code'
+                                            },
+                                            {
+                                                col:'-6', colLg:'-4',
+                                                id:'inputCountry', class:'select-change other',
+                                                type:'select',
+                                                label:'&nbsp;', labelRwd:true,
+                                                opt1:'Country'
+                                            },
+                                            {
+                                                col:'-6', colLg:'-4',
+                                                id:'inputZip', class:'select-change other',
+                                                type:'select',
+                                                label:'&nbsp;', labelRwd:true,
+                                                opt1:'Zip Code'
+                                            },
+                                            {
+                                                col:'-12', colLg:'-6',
+                                                id:'inputAddress', class:'select-change thailand',
+                                                type:'text',
+                                                placeholder:'Address'
+                                            },
+                                            {
+                                                col:'-12', colLg:'-12',
+                                                id:'inputAddress', class:'select-change other',
+                                                type:'text',
+                                                placeholder:'Address'
+                                            },
+                                        ],
+                                    },
+                                })
+                                <div class="w-100"></div>
+                                @@include('../partial/comp/_forms.html',{
+                                    group: {
+                                        item: [
+                                            {col:'-12', colLg:'-6', id:'inputPw', type:'password', label:'Password', placeholder:'', affixLabel:'<i class="bi bi-eye-fill"></i>'},
+                                            {col:'-12', colLg:'-6', id:'inputPwconfirm', type:'password', label:'Confirm Password', placeholder:'', affixLabel:'<i class="bi bi-eye-fill"></i>'},
+                                        ],
+                                    },
+                                })
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            @@include('../partial/unit/_btn-form.html',{
+                                col:'-12',
+                                href:'#',
+                                label:'Save'
+                            })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- global -->
+        @@include('../partial/global/_js.html')
+    </body>
+</html>

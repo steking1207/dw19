@@ -1,0 +1,30 @@
+.of-cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 50% 50%;
+    object-position: 50% 50%;
+    font-family: "object-fit: cover;";
+}
+.of-contain {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: 50% 50%;
+    object-position: 50% 50%;
+    font-family: "object-fit: contain;";
+}
+.of-fill {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: fill;
+    object-fit: fill;
+    -o-object-position: 50% 50%;
+    object-position: 50% 50%;
+    font-family: "object-fit: fill;";
+}

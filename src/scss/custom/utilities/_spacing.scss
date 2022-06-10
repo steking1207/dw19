@@ -1,0 +1,8 @@
+.pb-100 {
+    padding-bottom: 100px;
+}
+@include media-breakpoint-up(lg) {
+    .py-lg-180 {
+        padding-block: 180px !important;
+    }
+}
