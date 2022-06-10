@@ -72,6 +72,12 @@ body {
   width: 6rem;
   text-overflow: ellipsis; }
 
+.text-facebook {
+  color: #3b5998; }
+
+.text-line {
+  color: #3ace01; }
+
 .img-flag {
   width: 34px; }
 

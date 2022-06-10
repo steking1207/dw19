@@ -87,16 +87,16 @@
                         <div class="swiper-slide">
                             <a href="#" target="_blank">
                                 <picture class="ratio ratio-3x1">
-                                    <source media="(min-width: 768px)" srcset="https://via.placeholder.com/1920x640/fcc">
-                                    <source media="(min-width: 320px)" srcset="https://via.placeholder.com/640x480/fcc?text=1:1">
-                                    <img class="of-cover" src="https://via.placeholder.com/1920x640/fcc" alt="">
+                                    <source media="(min-width: 768px)" srcset="https://via.placeholder.com/1920x640/fcc?text=DesktopSize-3:1_or_anysize">
+                                    <source media="(min-width: 320px)" srcset="https://via.placeholder.com/640x640/fcc?text=MobileSize-1:1">
+                                    <img class="of-cover" src="https://via.placeholder.com/1920x640/fcc?text=DesktopSize-3:1_or_anysize" alt="">
                                 </picture>
                             </a>
                         </div><div class="swiper-slide">
                             <a href="#" target="_blank">
                                 <picture class="ratio ratio-3x1">
                                     <source media="(min-width: 768px)" srcset="https://via.placeholder.com/1920x900/efc">
-                                    <source media="(min-width: 320px)" srcset="https://via.placeholder.com/640x480/efc?text=1:1">
+                                    <source media="(min-width: 320px)" srcset="https://via.placeholder.com/1920x900/efc">
                                     <img class="of-cover" src="https://via.placeholder.com/1920x900/efc" alt="">
                                 </picture>
                             </a>
@@ -104,7 +104,7 @@
                             <a href="#" target="_blank">
                                 <picture class="ratio ratio-3x1">
                                     <source media="(min-width: 768px)" srcset="https://via.placeholder.com/1920x640/00f">
-                                    <source media="(min-width: 320px)" srcset="https://via.placeholder.com/640x480/00f?text=1:1">
+                                    <source media="(min-width: 320px)" srcset="https://via.placeholder.com/640x640/00f?text=MobileSize-1:1">
                                     <img class="of-cover" src="https://via.placeholder.com/1920x640/00f" alt="">
                                 </picture>
                             </a>
@@ -444,22 +444,29 @@
                     </div>
                 </div>
         </footer>
-        <div class="position-fixed top-50 end-0 translate-middle-y z-100 me-40 d-none d-lg-block" id="quicknav">
-            <div class="btn-group-vertical">
+        <div class="position-fixed top-50 end-0 z-100 translate-middle-y me-16" id="banner">
+            <div class="d-none d-lg-block">
                 <a class="btn p-0 border-0" href="#">
-                    <img class="of-cover" src="assets/img/uploads/btn-helpler.png" alt="DW Rider">
+                    <img class="of-cover" src="https://via.placeholder.com/100x100/333" alt="">
                 </a>
-                <a class="btn p-0 border-0" href="#">
-                    <img class="of-cover" src="assets/img/uploads/btn-facebook.png" alt="Facebook">
-                </a>
-                <a class="btn p-0 border-0" href="#">
-                    <img class="of-cover" src="assets/img/uploads/btn-line.png" alt="Line">
-                </a>
+                <div class="position-absolute top-0 end-0 me-4">
+                    <a class="btn-banner-close" href="javascript:void();">
+                        <img class="img-fluid" src="assets/img/ui/icon-close.svg" alt="Close">
+                    </a>
+                </div>
             </div>
-            <div class="position-absolute top-0 end-0 me-4" style="z-index: 100;">
-                
-                <a class="btn-quicknav-close" href="javascript:void();">
-                    <i class="bi bi-x-circle-fill text-white lead"></i>
+        </div>
+        <div class="position-fixed bottom-0 end-0 z-100 d-none d-lg-block me-16 mb-16" id="quicknav">
+            <div class="btn-group-vertical gap-8">
+                <a class="p-8 border-0 bg-white text-center rounded-circle shadow" href="#">
+                    <div class="text-center h2 text-facebook lh-1 m-0">
+                        <i class="bi bi-messenger"></i>
+                    </div>
+                </a>
+                <a class="p-8 border-0 bg-white text-center rounded-circle shadow" href="#">
+                    <div class="text-center h2 text-line lh-1 m-0">
+                        <i class="bi bi-line"></i>
+                    </div>
                 </a>
             </div>
         </div>
