@@ -25,7 +25,7 @@
     </head>
     <body id="top">
         <header class="sticky-top bg-white shadow" id="header">
-            <div class="container-xl px-0 px-xl-12 py-12 py-xl-20">
+            <div class="container-xl px-0 px-xl-12 py-0 py-xl-20">
                 <nav class="navbar navbar-expand-xl p-0">
                     <a class="navbar-brand ms-12 ms-xl-0" title="DW19" href="index.html">
                         <img src="assets/img/ui/logo.svg" alt="DW19">
@@ -33,7 +33,7 @@
                     <a class="navbar-toggler hamburger-menu btn-mobile-menu px-0 me-12 me-xl-0" data-bs-toggle="collapse" data-bs-target="#navbarNav" href="javascript:void();">
                         <span></span>
                     </a>
-                    <div class="collapse navbar-collapse pt-12 pt-xl-0" id="navbarNav">
+                    <div class="collapse navbar-collapse pt-4 pt-xl-0" id="navbarNav">
                         <div class="nav-main w-100 d-flex align-items-xl-center justify-content-xl-between bg-white">
                             <ul class="navbar-nav me-xl-auto">
                                 <li class="nav-item">
@@ -85,7 +85,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-xl-6">
-                                    <a class="btn btn-primary w-100 text-uppercase text-white fw-bold px-24 py-12 rounded" href="upload.html">
+                                    <a class="btn btn-primary w-100 text-uppercase text-white fw-bold px-24 py-12 rounded" href="javscript:void();" data-bs-toggle="modal" data-bs-target="#modalUnlock">
                                         Upload & <br>Earn Point
                                     </a>
                                 </div>
@@ -102,24 +102,24 @@
                 <div class="swiper swiper-kv">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <a href="#" target="_blank">
-                                <picture class="ratio ratio-3x1">
+                            <a class="d-block ratio ratio-3x1" href="#" target="_blank">
+                                <picture>
                                     <source media="(min-width: 768px)" srcset="https://via.placeholder.com/1920x640/fcc?text=DesktopSize-3:1_or_anysize">
                                     <source media="(min-width: 320px)" srcset="https://via.placeholder.com/640x640/fcc?text=MobileSize-1:1">
                                     <img class="of-cover" src="https://via.placeholder.com/1920x640/fcc?text=DesktopSize-3:1_or_anysize" alt="">
                                 </picture>
                             </a>
                         </div><div class="swiper-slide">
-                            <a href="#" target="_blank">
-                                <picture class="ratio ratio-3x1">
+                            <a class="d-block ratio ratio-3x1" href="#" target="_blank">
+                                <picture>
                                     <source media="(min-width: 768px)" srcset="https://via.placeholder.com/1920x900/efc">
                                     <source media="(min-width: 320px)" srcset="https://via.placeholder.com/1920x900/efc">
                                     <img class="of-cover" src="https://via.placeholder.com/1920x900/efc" alt="">
                                 </picture>
                             </a>
                         </div><div class="swiper-slide">
-                            <a href="#" target="_blank">
-                                <picture class="ratio ratio-3x1">
+                            <a class="d-block ratio ratio-3x1" href="#" target="_blank">
+                                <picture>
                                     <source media="(min-width: 768px)" srcset="https://via.placeholder.com/1920x640/00f">
                                     <source media="(min-width: 320px)" srcset="https://via.placeholder.com/640x640/00f?text=MobileSize-1:1">
                                     <img class="of-cover" src="https://via.placeholder.com/1920x640/00f" alt="">
@@ -670,10 +670,45 @@
                 </a>
             </div>
         </div>
+
+        <div class="modal fade" id="modalUnlock" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content shadow">
+                    <div class="modal-body py-40">
+                        <div class="text-center">
+                            <div class="h5 text-danger mb-40">You haven’t unlock Upload function.</div>
+                            <p class="lead">
+                                You have to provide stock account information before fully access to DW19 Membership System.
+                            </p>
+                            <p class="lead m-0">
+                                Do you want to Link Stock account now?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <div class="d-flex gap-12 col-12  col-lg-6 mx-auto">
+                            
+                                <div class="d-grid col">
+                                    <a class="btn btn-outline-secondary text-uppercase   " href="#" data-bs-dismiss="modal" >
+                                        Do it later
+                                    </a>
+                                </div>
+                            
+                                <div class="d-grid col">
+                                    <a class="btn btn-primary text-uppercase text-white  " href="account.html"  >
+                                        Link Now
+                                    </a>
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
-        <script src="assets/js/plugin/bootstrap.bundle.min.js"></script>
-        <script src="assets/js/plugin/swiper.min.js"></script>
-        <script src="assets/js/plugin/ofi.min.js"></script>
+        <script src="assets/js/plugin/bootstrap.bundle.min.js?v=5.2.0-beta1"></script>
+        <script src="assets/js/plugin/swiper.min.js?v=5.4.3"></script>
+        <script src="assets/js/plugin/ofi.min.js?v=3.2.4"></script>
         <script src="assets/js/custom.js"></script>
     </body>
 </html>

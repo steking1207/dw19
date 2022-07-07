@@ -14,7 +14,7 @@
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="DW19" />
         
-        <title>OTP Verification - DW19</title>
+        <title>OTP Verification | DW19</title>
         
         
         
@@ -55,32 +55,58 @@
                                 <input type="text" class="form-control form-control-lg text-center rounded input-otp" maxlength="1">
                                 <input type="text" class="form-control form-control-lg text-center rounded input-otp" maxlength="1">
                             </div>
-                            <div class="h2 text-center text-danger m-0">
+                            <div class="h2 text-center text-danger m-0" id="time">
                                 03:00
                             </div>
                         </div>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-12 col-lg-4">
-                            <form>
-                                <p class="text-center">
-                                    Didn't receive OTP? <br><a href="#">Resend OTP</a> or <a href="#">Change Phone Number</a>
-                                </p>
-                                <div class="d-grid col-12  mx-auto">
-                                    <a class="btn btn-primary text-uppercase text-white fw-bold py-8 " href="#">
-                                        Continue
-                                    </a>
-                                </div>
-                            </form>
+                            <p class="text-center">
+                                Didn't receive OTP? <br><a href="#">Resend OTP</a> or <a href="#">Change Phone Number</a>
+                            </p>
+                            <div class="d-flex gap-12 col-12   mx-auto">
+                                
+                                    <div class="d-grid col">
+                                        <a class="btn btn-primary text-uppercase text-white  " href="#"  >
+                                            Continue
+                                        </a>
+                                    </div>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
         
-        <script src="assets/js/plugin/bootstrap.bundle.min.js"></script>
-        <script src="assets/js/plugin/swiper.min.js"></script>
-        <script src="assets/js/plugin/ofi.min.js"></script>
+        <script src="assets/js/plugin/bootstrap.bundle.min.js?v=5.2.0-beta1"></script>
+        <script src="assets/js/plugin/swiper.min.js?v=5.4.3"></script>
+        <script src="assets/js/plugin/ofi.min.js?v=3.2.4"></script>
         <script src="assets/js/custom.js"></script>
+        
+        <script>
+            function startTimer(duration, display) {
+                var timer = duration, minutes, seconds;
+                setInterval(function () {
+                    minutes = parseInt(timer / 60, 10);
+                    seconds = parseInt(timer % 60, 10);
+
+                    minutes = minutes < 10 ? "0" + minutes : minutes;
+                    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                    display.textContent = minutes + ":" + seconds;
+
+                    if (--timer < 0) {
+                        timer = 0;
+                    }
+                }, 1000);
+            }
+            window.onload = function () {
+                var fiveMinutes = 60 * 3,
+                    display = document.querySelector('#time');
+                startTimer(fiveMinutes, display);
+            };
+        </script>
     </body>
 </html>

@@ -85,4 +85,11 @@ $(function () {
               $(this).blur();
         }
     });
+
 });
+
+function changeFavorite(anchor) {
+    var icon = anchor.querySelector("i");
+    icon.classList.toggle('bi-heart');
+    icon.classList.toggle('bi-heart-fill');
+}

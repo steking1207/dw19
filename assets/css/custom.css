@@ -81,6 +81,11 @@ body {
 .img-flag {
   width: 34px; }
 
+.btn-outline-primary {
+  --bs-btn-color: #0092db;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-color: #fff; }
+
 .btn-bd-white-lg {
   --bs-btn-padding-x: 2rem;
   --bs-btn-padding-y: 1rem;
@@ -94,10 +99,24 @@ body {
   --bs-btn-active-bg: var(--bs-btn-hover-bg);
   --bs-btn-border-width: 0; }
 
+.btn-point {
+  --bs-btn-color: #6c757d;
+  --bs-btn-bg: var(--bs-white);
+  --bs-btn-border-color: var(--bs-btn-color);
+  --bs-btn-active-color: #0075af;
+  --bs-btn-active-bg: #cce9f8;
+  --bs-btn-border-width: 1px; }
+
 .btn-join {
   background-color: #0066b3; }
   .btn-join:hover, .btn-join:focus {
     background-color: #0b5981; }
+
+.btn-hover-shadow {
+  transition: all 0.5s ease; }
+  .btn-hover-shadow:hover, .btn-hover-shadow:focus {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shdow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
 
 .hamburger-menu {
   position: relative;
@@ -148,6 +167,15 @@ body {
   .btn-google:hover, .btn-google:focus {
     background-color: #b92124; }
 
+.file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0; }
+
 .card-activity .card-img-overlay {
   opacity: 0;
   transition: .5s ease;
@@ -189,6 +217,15 @@ body {
 .bg-login {
   background-image: url(../img/ui/bg-header-login.png); }
 
+.bg-congrats {
+  background-position: center center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-image: url(../img/ui/bg-congrats.png); }
+
+.bg-primary-o10 {
+  background-color: rgba(0, 146, 219, 0.1); }
+
 .border-cross {
   position: relative; }
   .border-cross span {
@@ -208,14 +245,44 @@ body {
     background-color: #adb5bd;
     content: ''; }
 
+.border-dashed {
+  border-style: dashed !important; }
+
 .z-100 {
   z-index: 100; }
+
+.hr-scroll {
+  overflow: auto;
+  white-space: nowrap; }
+
+.vt-scroll {
+  overflow-y: auto;
+  overflow-x: hidden; }
+  .vt-scroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    margin-top: 8px;
+    margin-bottom: 8px; }
+  .vt-scroll::-webkit-scrollbar {
+    width: 8px;
+    background-color: #fff; }
+  .vt-scroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #ced4da; }
 
 .h-row-2 {
   height: 3em; }
 
+.h-160 {
+  height: 160px !important; }
+
 .h-220 {
   height: 220px !important; }
+
+.h-400 {
+  height: 400px !important; }
 
 .ratio-3x1 {
   --bs-aspect-ratio: 100%; }
@@ -766,3 +833,219 @@ button.swiper-pagination-bullet {
 .swiper-container-multirow-column > .swiper-wrapper {
   flex-wrap: wrap;
   flex-direction: column; }
+
+/* @group Base */
+.chosen-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  .chosen-container * {
+    box-sizing: border-box; }
+  .chosen-container .chosen-drop {
+    position: absolute;
+    top: 100%;
+    z-index: 1010;
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-top: 0;
+    background: #fff;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    clip: rect(0, 0, 0, 0);
+    -webkit-clip-path: inset(100% 100%);
+            clip-path: inset(100% 100%); }
+  .chosen-container.chosen-with-drop .chosen-drop {
+    clip: auto;
+    -webkit-clip-path: none;
+            clip-path: none; }
+  .chosen-container a {
+    cursor: pointer; }
+  .chosen-container .search-choice .group-name, .chosen-container .chosen-single .group-name {
+    margin-right: 4px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: normal;
+    color: #999999; }
+    .chosen-container .search-choice .group-name:after, .chosen-container .chosen-single .group-name:after {
+      content: ":";
+      padding-left: 2px;
+      vertical-align: top; }
+
+/* @end */
+/* @group Single Chosen */
+.chosen-container-single .chosen-single {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  -moz-padding-start: calc(0.75rem - 3px);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 0;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  text-decoration: none;
+  height: 40px; }
+
+.chosen-container-single .chosen-default {
+  color: #999; }
+
+.chosen-container-single .chosen-single span {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-right: 26px;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.chosen-container-single .chosen-single-with-deselect span {
+  margin-right: 38px; }
+
+.chosen-container-single.chosen-disabled .chosen-single abbr:hover {
+  background-position: -42px -10px; }
+
+.chosen-container-single .chosen-single div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 18px;
+  height: 100%; }
+
+.chosen-container-single .chosen-drop {
+  margin-top: -1px;
+  background-clip: padding-box; }
+
+.chosen-container-single.chosen-container-single-nosearch .chosen-search {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  -webkit-clip-path: inset(100% 100%);
+          clip-path: inset(100% 100%); }
+
+/* @end */
+/* @group Results */
+.chosen-container .chosen-results {
+  color: #444;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0 4px 4px 0;
+  padding: 0 0 0 4px;
+  max-height: 240px;
+  -webkit-overflow-scrolling: touch; }
+  .chosen-container .chosen-results li {
+    display: none;
+    margin: 0;
+    padding: 5px 6px;
+    list-style: none;
+    word-wrap: break-word;
+    -webkit-touch-callout: none; }
+    .chosen-container .chosen-results li.active-result {
+      display: list-item;
+      cursor: pointer; }
+    .chosen-container .chosen-results li.disabled-result {
+      display: list-item;
+      color: #ccc;
+      cursor: default; }
+    .chosen-container .chosen-results li.highlighted {
+      background-color: #0092db;
+      color: #fff; }
+    .chosen-container .chosen-results li.no-results {
+      color: #777;
+      display: list-item;
+      background: #f4f4f4; }
+    .chosen-container .chosen-results li.group-result {
+      display: list-item;
+      font-weight: bold;
+      cursor: default; }
+    .chosen-container .chosen-results li.group-option {
+      padding-left: 15px; }
+    .chosen-container .chosen-results li em {
+      font-style: normal;
+      text-decoration: underline; }
+
+/* @end */
+/* @group Active  */
+.chosen-container-active .chosen-single {
+  border: 1px solid #ced4da;
+  outline: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15); }
+
+.chosen-container-active.chosen-with-drop .chosen-single {
+  border: 1px solid #ced4da; }
+
+.chosen-container-active.chosen-with-drop .chosen-single div {
+  border-left: none;
+  background: transparent; }
+  .chosen-container-active.chosen-with-drop .chosen-single div b {
+    background-position: -18px 2px; }
+
+.chosen-container-active .chosen-choices {
+  border: 1px solid #5897fb;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
+  .chosen-container-active .chosen-choices li.search-field input[type="text"] {
+    color: #222 !important; }
+
+/* @end */
+/* @group Disabled Support */
+.chosen-disabled {
+  opacity: 0.5 !important;
+  cursor: default; }
+  .chosen-disabled .chosen-single {
+    cursor: default; }
+  .chosen-disabled .chosen-choices .search-choice .search-choice-close {
+    cursor: default; }
+
+/* @end */
+/* @group Retina compatibility */
+/* @end */
+/*
+  Chosen - (harvesthq.github.com/chosen/) responsive css hack for Bootstrap (twitter.github.com/bootstrap)
+  https://gist.github.com/benblodgett/4627725
+*/
+[class*="col-"] .chosen-container {
+  width: 100% !important; }
+
+[class*="col-"] .chosen-container .chosen-drop {
+  width: 100% !important; }
+
+/**
+ * Image Select Styles
+ *
+ * @author     Web Semantics, Inc. Dev Team <info@websemantics.ca>
+ * @copyright  2011-2015 Web Semantics, Inc.
+ * @link       http://websemantics.ca
+ * @license    https://opensource.org/licenses/MIT
+ */
+/* Tag image */
+.chose-image {
+  width: 55px;
+  max-height: 55px;
+  padding: 2px 5px 3px 0px;
+  vertical-align: middle; }
+
+/* Image for Single mode */
+.chose-image-small {
+  width: 30px;
+  max-height: 30px;
+  margin-right: 8px; }
+
+/* Images appended to the li(s) */
+.chose-image-list {
+  width: 30px;
+  max-height: 30px;
+  margin-right: 8px; }
