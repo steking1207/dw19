@@ -18,13 +18,16 @@
         }
     }
     @@if(context.type=='select'){
-        <select class="form-select">
-            <option @@if(context.value1){value="@@value1"}>@@opt1</option>
+        <select class="form-select @@if(context.opt1Img){form-select-img}">
+            <option @@if(context.value1){value="@@value1"} @@if(context.opt1Img){data-img-src="@@opt1Img"}>@@opt1</option>
             @@if(context.opt2){
-            <option @@if(context.value2){value="@@value2"}>@@opt2</option>
+            <option @@if(context.value2){value="@@value2"} @@if(context.opt2Img){data-img-src="@@opt2Img"}>@@opt2</option>
             }
             @@if(context.opt3){
-            <option @@if(context.value3){value="@@value3"}>@@opt3</option>
+            <option @@if(context.value3){value="@@value3"} @@if(context.opt3Img){data-img-src="@@opt3Img"}>@@opt3</option>
+            }
+            @@if(context.opt4){
+            <option @@if(context.value3){value="@@value3"} @@if(context.opt4Img){data-img-src="@@opt4Img"}>@@opt4</option>
             }
         </select>
     }

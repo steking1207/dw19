@@ -1,0 +1,23 @@
+<div class="row g-4 py-20 border-bottom">
+    <div class="col-auto">
+        <i class="bi bi-file-earmark-text-fill h4 m-0"></i>
+    </div>
+    <div class="col">
+        <div class="row justify-content-between mb-4">
+            <div class="col tex-dark text-row-1">
+                @@fileName
+            </div>
+            <div class="col-auto text-muted">
+                @@fileSize
+                <a class="text-muted" href="#">
+                    <i class="bi bi-x"></i>
+                </a>
+            </div>
+        </div>
+        @@if(context.barWidth){
+        <div class="progress" style="height: 5px;">
+            <div class="progress-bar @@if(context.barWidth != '100'){progress-bar-striped progress-bar-animated bg-info}" role="progressbar" style="width: @@barWidth%;" aria-valuenow="@@barWidth" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        }
+    </div>
+</div>

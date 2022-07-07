@@ -1,0 +1,16 @@
+<div class="d-grid col-12 col-lg-8 mx-auto mb-80">
+    @@if(context.title){
+        @@include('../../unit/_title-h5.html',{
+            title:'@@title',
+        })
+    }
+    <hr class="border-secondary mb-0">
+    @@loop('unit/_file-upload-item.html', [
+        {fileName:'Simple Name A.pdf', fileSize:'143 KB', barWidth:'30'},
+        {fileName:'Simple Name B.pdf', fileSize:'58 KB', barWidth:'100'},
+        {fileName:'Space.pdf', fileSize:'345 KB', barWidth:'77'},
+        {fileName:'stairway to heaven.pdf', fileSize:'985 KB', barWidth:'15'},
+        {fileName:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.pdf', fileSize:'985 KB', barWidth:'15'},
+    ])
+    <div class="mt-28 text-center text-uppercase fw-bold">More...</div>
+</div>

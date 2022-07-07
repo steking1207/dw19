@@ -1,3 +1,8 @@
+.btn-outline-primary {
+    --bs-btn-color: #{$primary};
+    --bs-btn-hover-color: #{$white};
+    --bs-btn-active-color: #{$white};
+}
 .btn-bd-white-lg {
     --bs-btn-padding-x: #{$spacer * 2};
     --bs-btn-padding-y: #{$spacer * 1};
@@ -11,6 +16,17 @@
     --bs-btn-active-bg: var(--bs-btn-hover-bg);
     --bs-btn-border-width: 0;
 }
+.btn-point {
+    --bs-btn-color: #{$gray-600};
+    --bs-btn-bg: var(--bs-white);
+    --bs-btn-border-color: var(--bs-btn-color);
+    // --bs-btn-hover-color: #{$primary};
+    // --bs-btn-hover-color: var(--bs-btn-hover-color);
+    // --bs-btn-hover-border-color: var(--bs-btn-hover-color);
+    --bs-btn-active-color: #{shade-color($primary, 20%)};
+    --bs-btn-active-bg: #{$blue-100};
+    --bs-btn-border-width: 1px;
+}
 .btn-join {
     background-color: $cr-ci-normal;
     &:hover,
@@ -18,7 +34,14 @@
         background-color: $cr-ci-dark;
     }
 }
-
+.btn-hover-shadow {
+    @include transition(all .5s ease);
+    &:hover,
+    &:focus {
+        box-shadow: 0 .5rem 1rem rgba($black, .15);
+        box-shdow: $box-shadow;
+    }
+}
 // styling of hamburger menu
 .hamburger-menu {
     position: relative;

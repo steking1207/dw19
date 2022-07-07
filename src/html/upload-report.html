@@ -1,0 +1,49 @@
+@@include('../partial/global/_head.html',{title:'Upload Report'})
+    <body id="top">
+        @@include('../partial/global/_header.html',{
+            state:'logged',
+            nav1Label:'Mission',
+            nav1Badge:'99+',
+            nav2Label:'Promotion',
+            nav3Label:'News & Announvement',
+            nav4Label:'learn about DW',
+            nav5Label:'Check Gift',
+        })
+        <main>
+            <div>
+                <div class="container py-80">
+                    @@include('../partial/page/admin/_report.html',{
+                        title:'What’s on your report? (If any)',
+                    })
+                    @@include('../partial/page/admin/_upload.html',{
+                        title:'Upload File',
+                    })
+                    @@include('../partial/page/admin/_attachment.html',{
+                        title:'Attachment',
+                    })
+                    @@include('../partial/comp/_btn-group.html',{
+                        col:'-12', colMd:'-6', colLg:'-4',
+                        group: {
+                            item: [
+                                {btnStyle:'primary', btnColor:'white', btnHref:'javascript:void();', btnLabel:'Send Report', target:'modalReport',},
+                            ],
+                        },
+                    })
+                </div>
+            </div>
+        </main>
+        @@include('../partial/global/_footer.html')
+        @@include('../partial/comp/_banner.html')
+        @@include('../partial/comp/_quicknav.html')
+        
+        @@include('../partial/modal/_unlock.html')
+        @@include('../partial/modal/_done.html',{
+            id:'modalReport',
+            iconColor:'success',
+            icon:'check-circle-fill',
+            paragraph:'Your report is now in our process.<br><span class="text-danger">Please don’t upload this file again.</span><br>Admin will check and contact back via phone and email'
+        })
+        <!-- global -->
+        @@include('../partial/global/_js.html')
+    </body>
+</html>

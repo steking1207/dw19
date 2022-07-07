@@ -1,0 +1,37 @@
+/**
+ * Image Select Styles
+ *
+ * @author     Web Semantics, Inc. Dev Team <info@websemantics.ca>
+ * @copyright  2011-2015 Web Semantics, Inc.
+ * @link       http://websemantics.ca
+ * @license    https://opensource.org/licenses/MIT
+ */
+
+
+$img-sm-size: 30px;
+
+/* Tag image */
+.chose-image {
+	width:55px;
+	max-height:55px;
+	padding: 2px 5px 3px 0px;
+	vertical-align:middle;
+}
+
+/* Image for Single mode */
+.chose-image-small {
+	width: $img-sm-size;
+	max-height: $img-sm-size;
+	// vertical-align: middle;
+	// margin: -3px 3px 0 0;
+    margin-right: 8px;
+}
+
+/* Images appended to the li(s) */
+.chose-image-list {
+	width: $img-sm-size;
+	max-height: $img-sm-size;
+    margin-right: 8px;
+	// vertical-align: middle;
+	// margin: -3px 3px 0 0;
+}

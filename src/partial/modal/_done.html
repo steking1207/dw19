@@ -1,0 +1,24 @@
+<div class="modal fade" id="@@id" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content shadow">
+            <div class="modal-body py-80">
+                <div class="display-1 text-center text-@@iconColor mb-20">
+                    <i class="bi bi-@@icon"></i>
+                </div>
+                <div class="text-center m-0 @@if(context.heading){@@heading}">
+                    @@paragraph
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                @@include('../comp/_btn-group.html',{
+                    col:'-12', colLg:'-6',
+                    group: {
+                        item: [
+                            {btnStyle:'primary', btnColor:'white', btnHref:'javascript:void();', btnLabel:'OK', dismiss:'true',},
+                        ],
+                    },
+                })
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,100 @@
+@@include('../partial/global/_head.html',{title:'Apple Watch Series 7 | Gift'})
+    <body id="top">
+        @@include('../partial/global/_header.html',{
+            state:'logged',
+            nav1Label:'Mission',
+            nav1Badge:'99+',
+            nav2Label:'Promotion',
+            nav3Label:'News & Announvement',
+            nav4Label:'learn about DW',
+            nav5Label:'Check Gift',
+        })
+        <main>
+            <div>
+                <div class="container py-80">
+                    <div class="row gx-40 position-relative">
+                        <div class="col-12 col-lg-4 mb-40 mb-lg-0">
+                            <img class="of-contain h-400" src="assets/img/uploads/prod-detail.jpg" alt="Apple Watch Series 7">
+                        </div>
+                        <div class="col-12 col-lg-8">
+                            <div class="d-flex gap-8 justify-content-between">
+                                <h2>Apple Watch Series 7 Lorem Lorem</h2>
+                                @@include('../partial/page/gift/unit/_btn-favorite.html',{
+                                    icon:'heart',
+                                    fontSize:'3',
+                                })
+                            </div>
+                            <div class="my-20 my-lg-40">
+                                <div class="row mb-20 mb-lg-40">
+                                    <label for="spec" class="col-sm-2 col-form-label">Spec</label>
+                                    <div class="col-sm-10">
+                                        <div class="hr-scroll">
+                                            <div class="d-flex gap-12">
+                                                @@loop('../partial/page/gift/unit/_btn-point.html', [
+                                                    {point:'8,000', label:'Midnight'},
+                                                    {point:'9,000', label:'Silver'},
+                                                    {point:'10,000', label:'Black'},
+                                                    {point:'11,000', label:'Dark Blue'},
+                                                    {point:'12,000', label:'White'},
+                                                ])
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-20 mb-lg-40">
+                                    <label for="spec" class="col-sm-2 col-form-label">Quantity</label>
+                                    <div class="col-12 col-lg-auto">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-secondary btn-number" data-type="minus" data-field="quant">
+                                                  <span class="bi bi-dash"></span>
+                                                </button>
+                                            </span>
+                                            <input type="text" name="quant" class="form-control input-number text-center" value="1" min="1" max="100">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-secondary btn-number" data-type="plus" data-field="quant">
+                                                    <span class="bi bi-plus"></span>
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-4 justify-content-center justify-content-lg-start align-items-center mb-20 mb-lg-40 h3 text-danger">
+                                <div id="point">8,000~12,000</div>
+                                <span class="badge rounded-pill text-bg-danger">P</span>
+                            </div>
+                            @@include('../partial/comp/_btn-group.html',{
+                                col:'-12', colMd:'6', colLg:'-4', center:false,
+                                group: {
+                                    item: [
+                                        {btnStyle:'primary', btnColor:'white', py:'16', btnHref:'javascript:void();', btnLabel:'Exchange', target:'modalGiftExchange'},
+                                    ],
+                                },
+                            })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @@include('../partial/global/_footer.html')
+        @@include('../partial/comp/_banner.html')
+        @@include('../partial/comp/_quicknav.html')
+        
+        @@include('../partial/modal/_unlock.html')
+        @@include('../partial/modal/_gift-exchange.html',{
+            id:'modalGiftExchange'
+        })
+        @@include('../partial/modal/_done.html',{
+            id:'modalGiftDone',
+            iconColor:'primary',
+            icon:'gift-fill',
+            heading:'h5',
+            paragraph:'Thank you for your exchange!'
+        })
+        <!-- global -->
+        @@include('../partial/global/_js.html')
+        <!-- single -->
+        @@include('../partial/page/gift/_js-detail.html')
+    </body>
+</html>

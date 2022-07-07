@@ -1,0 +1,5 @@
+<div class="d-flex gap-12 col@@col @@if(context.colMd){col-md@@colMd} @@if(context.colLg){col-lg@@colLg} @@if(context.center!==false){mx-auto}">
+    @@for (var i = 0; i < group.item.length; i++) {
+        @@include('../unit/_btn.html', `+(JSON.stringify(group.item[i]))+`)
+    }
+</div>

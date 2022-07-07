@@ -1,0 +1,11 @@
+<div class="d-grid col-12 col-lg-8 mx-auto mb-80">
+    @@if(context.title){
+        @@include('../../unit/_title-h5.html',{
+            title:'@@title',
+        })
+    }
+    <div class="form-floating">
+        <textarea class="form-control h-160" placeholder="Enter your Report" id="textareaReport"></textarea>
+        <label for="floatingTextarea2">Enter your Report</label>
+      </div>
+</div>

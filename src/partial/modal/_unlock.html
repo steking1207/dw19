@@ -1,0 +1,28 @@
+<div class="modal fade" id="modalUnlock" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content shadow">
+            <div class="modal-body py-40">
+                <div class="text-center">
+                    <div class="h5 text-danger mb-40">You haven’t unlock Upload function.</div>
+                    <p class="lead">
+                        You have to provide stock account information before fully access to DW19 Membership System.
+                    </p>
+                    <p class="lead m-0">
+                        Do you want to Link Stock account now?
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                @@include('../comp/_btn-group.html',{
+                    col:'-12', colLg:'-6',
+                    group: {
+                        item: [
+                            {btnStyle:'outline-secondary', btnHref:'#', btnLabel:'Do it later', dismiss:'true',},
+                            {btnStyle:'primary', btnColor:'white', btnHref:'account.html', btnLabel:'Link Now',},
+                        ],
+                    },
+                })
+            </div>
+        </div>
+    </div>
+</div>

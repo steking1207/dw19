@@ -126,14 +126,15 @@
                                 })
                             </div>
                         </div>
-                        <div class="col-12 col-lg-4">
-                            @@include('../partial/unit/_btn-form.html',{
-                                col:'-12',
-                                href:'#',
-                                label:'Save'
-                            })
-                        </div>
                     </div>
+                    @@include('../partial/comp/_btn-group.html',{
+                        col:'-12', colMd:'-6', colLg:'-4',
+                        group: {
+                            item: [
+                                {btnStyle:'primary', btnColor:'white', btnHref:'#', btnLabel:'Save',},
+                            ],
+                        },
+                    })
                 </div>
             </div>
         </main>

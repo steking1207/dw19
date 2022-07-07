@@ -1,0 +1,20 @@
+<div class="d-grid col-12 col-lg-8 mx-auto mb-80">
+    @@if(context.title){
+        @@include('../../unit/_title-h5.html',{
+            title:'@@title',
+        })
+    }
+    <div class="position-relative mb-28 p-40 btn btn-light border border-dashed border-secondary text-center">
+        <div class="mb-20 text-primary display-1">
+            <i class="bi bi-cloud-upload"></i>
+        </div>
+        <div class="mb-8">
+            <div class="lead fw-bold">Drag and drop file here to upload</div>
+        </div>
+        <span class="btn btn-link text-decoration-underline">or select file to upload</span>
+        <input class="file-input" type="file" multiple>
+    </div>
+    <ul class="m-0 ps-24">
+        <li class="text-secondary">Please use only PDF file provided by your security company.</li>
+    </ul>
+</div>

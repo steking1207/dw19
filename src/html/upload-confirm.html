@@ -1,0 +1,237 @@
+@@include('../partial/global/_head.html',{title:'Upload Confirm'})
+    <body id="top">
+        @@include('../partial/global/_header.html',{
+            state:'logged',
+            nav1Label:'Mission',
+            nav1Badge:'99+',
+            nav2Label:'Promotion',
+            nav3Label:'News & Announvement',
+            nav4Label:'learn about DW',
+            nav5Label:'Check Gift',
+        })
+        <main>
+            <div>
+                <div class="container py-80">
+                    <div class="d-grid col-12 col-lg-8 mx-auto text-center mb-0 mb-lg-20 py-40 py-lg-60 bg-congrats">
+                        <div class="mb-28">
+                            <h2>Hi Gam</h2>
+                            <div class="h4">Congratulations for your points!</div>
+                        </div>
+                        <div class="mb-28">
+                            <div class="h3">Please click confirm to get</div>
+                            <div class="h1 text-uppercase">1,500 points</div>
+                        </div>
+                        <div class="row g-8 justify-content-center">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="lead text-center bg-primary-o10 py-20">
+                                    Get <span class="h1">5665</span> Points
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="lead text-center bg-primary-o10 py-20">
+                                    <span class="h1">1200</span> Confirmed
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-grid col-12 col-lg-8 mx-auto mb-80">
+                        <div class="alert alert-warning border-0 rounded-0 m-0 py-8 text-center">
+                            All 2 files are selected. <a class="btn btn-link p-0" href="javascript:void();" data-bs-toggle="modal" data-bs-target="#modalCheckAll">Confirm to get 1,500 points</a>
+                        </div>
+                        <div class="row my-20">
+                            <div class="col-7">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" name="chkAll" id="selectAll" onClick="selectAll(this)">
+                                    <label class="form-check-label text-secondary" for="selectAll">
+                                        File Name
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-5 text-center">
+                                <div class="text-center text-secondary">
+                                    Status
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="border-secondary m-0">
+                        <div class="vt-scroll h-400">
+                            @@loop('../partial/page/admin/unit/_file-confirm-item.html', [
+                            {
+                                id:'0', fileName:'Check Result.pdf',
+                                btnStyle:'outline-primary', textColor:'primary', 
+                                icon:'exclamation-triangle-fill', btnLabel:'Check Result', 
+                                modal:'modalCheckResult'
+                            },
+                            {
+                                id:'1', fileName:'1. Stock Account Not Registered / Multiple Account in One Company.pdf', 
+                                btnStyle:'outline-danger', textColor:'danger', 
+                                icon:'x-circle-fill', btnLabel:'Error',
+                                modal:'modalError1',
+                            },
+                            {
+                                id:'2', fileName:'2. Data Out of Date.pdf', 
+                                btnStyle:'outline-danger', textColor:'danger', 
+                                icon:'x-circle-fill', btnLabel:'Error',
+                                modal:'modalError2',
+                            },
+                            {
+                                id:'3', fileName:'3. Acct. Name Not the same / Tax ID Not Matched.pdf', 
+                                btnStyle:'outline-danger', textColor:'danger', 
+                                icon:'x-circle-fill', btnLabel:'Error',
+                                modal:'modalError3',
+                            },
+                            {
+                                id:'4', fileName:'4. Can’t Recognize Format.pdf', 
+                                btnStyle:'outline-danger', textColor:'danger', 
+                                icon:'x-circle-fill', btnLabel:'Error',
+                                modal:'modalError4',
+                            },
+                            {
+                                id:'5', fileName:'5. Resolution Not Good Enough.pdf', 
+                                btnStyle:'outline-danger', textColor:'danger', 
+                                icon:'x-circle-fill', btnLabel:'Error',
+                                modal:'modalError5',
+                            },
+                            {
+                                id:'6', fileName:'6. Lack of Password.pdf', 
+                                btnStyle:'outline-danger', textColor:'danger', 
+                                icon:'x-circle-fill', btnLabel:'Error',
+                                modal:'modalError6',
+                            },
+                            {
+                                id:'7', fileName:'7. File Page Not the Same.pdf', 
+                                btnStyle:'outline-danger', textColor:'danger', 
+                                icon:'x-circle-fill', btnLabel:'Error',
+                                modal:'modalError7',
+                            },
+                            {
+                                id:'8', fileName:'8. Upload Fail.pdf', 
+                                btnStyle:'outline-danger', textColor:'danger', 
+                                icon:'x-circle-fill', btnLabel:'Error',
+                                modal:'modalError8',
+                            },
+                            {
+                                id:'9', fileName:'Report Sent.pdf', 
+                                btnStyle:'outline-secondary', textColor:'secondary', 
+                                icon:'clock-fill', btnLabel:'Report Sent', 
+                                disabled:true
+                            },
+                            {
+                                id:'10', fileName:'Done.pdf',
+                                btnStyle:'outline-success', textColor:'success',
+                                icon:'check-circle-fill', btnLabel:'Done', 
+                                disabled:true
+                            },
+                            ])
+                        </div>
+                        <div class="alert alert-secondary border-0 rounded-0 m-0">
+                            <div class="lead text-danger mb-12">*Remark:</div>
+                            <ol class="m-0 fs-small">
+                                <li>Please Click "Check Result" and confirm your point, this will record your receipt to our system.</li>
+                                <li>File still haven't record to our system yet until you confirm or report error.</li>
+                                <li>You can safely remove the files you've done with, this won't effects data.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @@include('../partial/global/_footer.html')
+        @@include('../partial/comp/_banner.html')
+        @@include('../partial/comp/_quicknav.html')
+
+        @@include('../partial/modal/_unlock.html')
+        @@include('../partial/modal/_message.html',{
+            id:'modalLeave',
+            heading:'lead',
+            paragraph:'Your file still haven’t record to our system<br>yet until you confirm or report error<br><br>Are you sure you want to leave?',
+            btn1Href:'#',
+            btn1Label:'Leave',
+            btn2Href:'#',
+            btn2Label:'Stay',
+            dismiss1:'false',
+            dismiss2:'true'
+        })
+        @@include('../partial/modal/_done.html',{
+            id:'modalCheckAll',
+            iconColor:'success',
+            icon:'check-circle-fill',
+            heading:'h5',
+            paragraph:'You gain total <span class="text-danger h3">1,500</span> pts from 2 files.',
+        })
+        @@include('../partial/modal/_file-check-result.html',{
+            id:'modalCheckResult'
+        })
+        @@include('../partial/modal/_file-error.html',{
+            id:'modalError1',
+            p1:'This Account is not linked to member’s account yet?',
+            p2:'Please go to setting this account in Member setting section.',
+            btn2Href:'account.html',
+            btn2Label:'Link Now'
+        })
+        @@include('../partial/modal/_file-error.html',{
+            id:'modalError2',
+            p1:'Your transaction date exceed the period we can accept.',
+            p2:'DW19 only accept data <span class="text-danger">30</span> Days before today (data upload date).<br>Please upload data within <span class="text-danger">30</span> Days after transactions happens.',
+            btn2Href:'javascript:void();',
+            btn2Label:'OK'
+        })
+        @@include('../partial/modal/_file-error.html',{
+            id:'modalError3',
+            p1:'Name on the receipt is not match with registered stock account.',
+            p2:'We only accept transaction record from member’s own securities account.<br>Please use and upload your own transaction record.',
+            btn2Href:'javascript:void();',
+            btn2Label:'OK'
+        })
+        @@include('../partial/modal/_file-error.html',{
+            id:'modalError4',
+            p1:'We cannot recognize your document format.',
+            p2:'If you want to use new format<br>Please apply for New Format Test in Reporting Problem<br>Admin will reply you the review result after.',
+            btn2Href:'javascript:void();',
+            btn2Label:'Send new format'
+        })
+        @@include('../partial/modal/_file-error.html',{
+            id:'modalError5',
+            p1:'Your file have too low image quality.',
+            p2:'Please try again and upload file with better resolution.',
+            btn2Href:'javascript:void();',
+            btn2Label:'Re-upload',
+        })
+        @@include('../partial/modal/_file-error.html',{
+            id:'modalError6',
+            p1:'You haven’t input a Pdf password yet.',
+            p2:'We need the password to open the file you just uploaded<br>Please insert and save password for future use.',
+            btn2Href:'javascript:void();',
+            btn2Label:'Continue',
+            placeholder:'Enter Password'
+        })
+        @@include('../partial/modal/_file-error.html',{
+            id:'modalError7',
+            p1:'Your Document is incomplete.',
+            p2:'Please upload the whole file given by Security Company.',
+            btn2Href:'javascript:void();',
+            btn2Label:'Re-upload',
+        })
+        @@include('../partial/modal/_file-error.html',{
+            id:'modalError8',
+            p1:'Uploading failed.',
+            p2:'Due to certain reason, the file upload is failed<br>Please try to re-upload again',
+            btn2Href:'javascript:void();',
+            btn2Label:'Re-upload',
+        })
+
+        <!-- global -->
+        @@include('../partial/global/_js.html')
+        <script>
+            $(document).ready(function() {
+                // $('#modalLeave').modal('show');
+            });
+            function selectAll(source) {
+                checkboxes = document.getElementsByName('chkFile');
+                for(var i=0, n=checkboxes.length;i<n;i++) {
+                    checkboxes[i].checked = source.checked;
+                }
+            }
+        </script>
+    </body>
+</html>

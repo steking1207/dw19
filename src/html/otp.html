@@ -30,23 +30,24 @@
                                 <input type="text" class="form-control form-control-lg text-center rounded input-otp" maxlength="1">
                                 <input type="text" class="form-control form-control-lg text-center rounded input-otp" maxlength="1">
                             </div>
-                            <div class="h2 text-center text-danger m-0">
+                            <div class="h2 text-center text-danger m-0" id="time">
                                 03:00
                             </div>
                         </div>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-12 col-lg-4">
-                            <form>
-                                <p class="text-center">
-                                    Didn't receive OTP? <br><a href="#">Resend OTP</a> or <a href="#">Change Phone Number</a>
-                                </p>
-                                @@include('../partial/unit/_btn-form.html',{
-                                    col:'-12',
-                                    href:'#',
-                                    label:'Continue'
-                                })
-                            </form>
+                            <p class="text-center">
+                                Didn't receive OTP? <br><a href="#">Resend OTP</a> or <a href="#">Change Phone Number</a>
+                            </p>
+                            @@include('../partial/comp/_btn-group.html',{
+                                col:'-12',
+                                group: {
+                                    item: [
+                                        {btnStyle:'primary', btnColor:'white', btnHref:'#', btnLabel:'Continue',},
+                                    ],
+                                },
+                            })
                         </div>
                     </div>
                 </div>
@@ -54,5 +55,29 @@
         </main>
         <!-- global -->
         @@include('../partial/global/_js.html')
+        <!-- single -->
+        <script>
+            function startTimer(duration, display) {
+                var timer = duration, minutes, seconds;
+                setInterval(function () {
+                    minutes = parseInt(timer / 60, 10);
+                    seconds = parseInt(timer % 60, 10);
+
+                    minutes = minutes < 10 ? "0" + minutes : minutes;
+                    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                    display.textContent = minutes + ":" + seconds;
+
+                    if (--timer < 0) {
+                        timer = 0;
+                    }
+                }, 1000);
+            }
+            window.onload = function () {
+                var fiveMinutes = 60 * 3,
+                    display = document.querySelector('#time');
+                startTimer(fiveMinutes, display);
+            };
+        </script>
     </body>
 </html>

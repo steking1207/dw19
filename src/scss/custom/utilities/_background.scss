@@ -8,3 +8,12 @@
 .bg-login {
     background-image: url(#{$path-ui}bg-header-login.png)
 }
+.bg-congrats {
+    background-position: center center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-image: url(#{$path-ui}bg-congrats.png);
+}
+.bg-primary-o10 {
+    background-color: rgba($primary,0.1);
+}

@@ -50,10 +50,13 @@
                                     },
                                 })
                             </div>
-                            @@include('../partial/unit/_btn-form.html',{
+                            @@include('../partial/comp/_btn-group.html',{
                                 col:'-12',
-                                href:'regist-form.html',
-                                label:'Join'
+                                group: {
+                                    item: [
+                                        {btnStyle:'primary', btnColor:'white', btnHref:'regist-form.html', btnLabel:'Join',},
+                                    ],
+                                },
                             })
                         </div>
                     </div>

@@ -1,0 +1,82 @@
+<div class="modal fade" id="@@id" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content shadow">
+            @@include('unit/_modal-header.html',{
+                title:'Check Result'
+            })
+            <div class="modal-body py-40">
+                <div class="row mb-20">
+                    <div class="col-12 col-lg-2 mb-20 mb-lg-0">
+                        <img class="of-contain border h-160" src="assets/img/uploads/pdf-preview.jpg" alt="">
+                    </div>
+                    <div class="col">
+                        <div class="row gy-20">
+                            <div class="col-5 text-secondary">Broker</div>
+                            <div class="col-7 fw-bold">BLS</div>
+                            <div class="col-5 text-secondary">Account No</div>
+                            <div class="col-7 fw-bold">376611-2</div>
+                            <div class="col-5 text-secondary">Settlement No</div>
+                            <div class="col-7 fw-bold">DN-20220310-26690</div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="table-responsive mb-40">
+                    <table class="table">
+                        <thead class="table-dark">
+                            <tr>
+                                <th class="text-center text-nowrap">Date</th>
+                                <th class="text-center text-nowrap">DW Symbol</th>
+                                <th class="text-center text-nowrap">Volume</th>
+                                <th class="text-center text-nowrap">Unit Price</th>
+                                <th class="text-center text-nowrap">Point Gained</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">2022/03/10</td>
+                                <td class="text-center">KTC19C2207A</td>
+                                <td class="text-center">2,000,000</td>
+                                <td class="text-center">0.35</td>
+                                <td class="text-center">400</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">2022/03/10</td>
+                                <td class="text-center">KTC19C2207A</td>
+                                <td class="text-center">2,000,000</td>
+                                <td class="text-center">0.35</td>
+                                <td class="text-center">400</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">2022/03/10</td>
+                                <td class="text-center">KTC19C2207A</td>
+                                <td class="text-center">2,000,000</td>
+                                <td class="text-center">0.35</td>
+                                <td class="text-center">400</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="h5 text-center mb-24">
+                    You will gain total <span class="h3 text-danger">800</span> pts from this receipt. Is this OK?
+                </div>
+                <div class="d-flex justify-content-center">
+                    <ul class="m-0 ps-24">
+                        <li class="text-secondary fs-small">We may later make a change to your points if we detect incorrect data or abnormal behaviour.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                @@include('../comp/_btn-group.html',{
+                    col:'-12', colLg:'-6',
+                    group: {
+                        item: [
+                            {btnStyle:'outline-secondary', btnHref:'upload-report.html', btnLabel:'Report',},
+                            {btnStyle:'primary', btnColor:'white', btnHref:'javascript:void();', btnLabel:'OK', dismiss:'true',},
+                        ],
+                    },
+                })
+            </div>
+        </div>
+    </div>
+</div>

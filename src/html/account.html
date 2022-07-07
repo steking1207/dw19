@@ -1,0 +1,96 @@
+@@include('../partial/global/_head.html',{title:'Manage Stock Account'})
+    <body id="top">
+        @@include('../partial/global/_header.html',{
+            state:'logged',
+            nav1Label:'Mission',
+            nav1Badge:'99+',
+            nav2Label:'Promotion',
+            nav3Label:'News & Announvement',
+            nav4Label:'learn about DW',
+            nav5Label:'Check Gift',
+        })
+        <main>
+            <div>
+                <div class="container py-80">
+                    <div class="h2 text-center text-uppercase mb-28">
+                        Manage Stock Account
+                    </div>
+                    <div class="h5 text-center mb-40">
+                        Kornkarn Rakbankerd (Only)
+                    </div>
+                    <div class="d-grid col-12 col-lg-4 mx-auto mb-40">
+                        <div class="dropdown shadow">
+                            <a class="btn btn-lg btn-outline-primary bg-primary-o10 dropdown-toggle d-flex align-items-center justify-content-between" href="#" data-bs-toggle="dropdown">
+                                Select
+                            </a>
+                            <ul class="dropdown-menu w-100 py-0 text-center">
+                                <li><a class="dropdown-item py-8" href="#">BLS | 12345678</a></li>
+                                <li><a class="dropdown-item py-8" href="#">YUANTA | 87543575</a></li>
+                                <li><a class="dropdown-item py-8" href="#">SCBX | 78462456</a></li>
+                                <li><hr class="dropdown-divider m-0"></li>
+                                <li><a class="dropdown-item m-0 py-8 h5 bg-primary-o10" href="#"><i class="bi bi-plus-square"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-4">
+                            <div class="row gy-16 mb-40">
+                                @@include('../partial/comp/_forms.html',{
+                                    group: {
+                                        item: [
+                                        {
+                                            col:'-12', id:'inputBroker', 
+                                            type:'select', label:'Select Broker',
+                                            opt1:'BLS1', opt2:'BLS2', opt3:'BLS3', opt4:'BLS4',
+                                            opt1Img:'assets/img/uploads/prod-01.jpg',
+                                            opt2Img:'assets/img/uploads/img-mission-03.png',
+                                            opt3Img:'https://via.placeholder.com/1920x900/fc0',
+                                            opt4Img:'https://images.unsplash.com/photo-1534237710431-e2fc698436d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YnVpbGRpbmd8ZW58MHx8MHx8&w=1000&q=80',
+                                        },
+                                        {
+                                            col:'-12', id:'inputNumber', 
+                                            type:'number', label:'Account Number', placeholder:'',
+                                        },
+                                        {
+                                            col:'-12', id:'inputFormat', 
+                                            type:'select', label:'Format', 
+                                            opt1:'Select',
+                                        },
+                                        {
+                                            col:'-12', id:'inputPw', 
+                                            type:'password', label:'PDF Password', placeholder:'',
+                                        },
+                                        ],
+                                    },
+                                })
+                            </div>
+                            @@include('../partial/comp/_btn-group.html',{
+                                col:'-12',
+                                group: {
+                                    item: [
+                                        {btnStyle:'primary', btnColor:'white', btnHref:'#', btnLabel:'Edit',},
+                                        {btnStyle:'danger', btnHref:'#', btnLabel:'Delete',},
+                                    ],
+                                },
+                            })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @@include('../partial/global/_footer.html')
+        @@include('../partial/comp/_banner.html')
+        @@include('../partial/comp/_quicknav.html')
+
+        @@include('../partial/modal/_unlock.html')
+        <!-- global -->
+        @@include('../partial/global/_js.html')
+        <!-- single -->
+        <script src="assets/js/plugin/chosen.jquery.js?v=1.8.7"></script>
+        <script src="assets/js/plugin/ImageSelect.jquery.js?v=1.8"></script>
+        <script>
+            $(".form-select-img").chosen({disable_search_threshold: 10});
+            $(".form-select-img").chosen({ width:"100%", });
+        </script>
+    </body>
+</html>

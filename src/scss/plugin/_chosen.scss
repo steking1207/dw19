@@ -1,0 +1,282 @@
+$chosen-sprite: url('chosen-sprite.png') !default;
+$chosen-sprite-retina: url('chosen-sprite@2x.png') !default;
+
+/* @group Base */
+.chosen-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  user-select: none;
+  * {
+    box-sizing: border-box;
+  }
+  .chosen-drop {
+    position: absolute;
+    top: 100%;
+    z-index: 1010;
+    width: 100%;
+    // border: 1px solid #aaa;
+    border: $form-select-border-width solid $form-select-border-color;
+    border-top: 0;
+    background: #fff;
+    box-shadow: 0 4px 5px rgba(#000,.15);
+    clip: rect(0,0,0,0);
+    clip-path: inset(100% 100%);
+  }
+  &.chosen-with-drop .chosen-drop {
+    clip: auto;
+    clip-path: none;
+  }
+  a{
+    cursor: pointer;
+  }
+
+  .search-choice, .chosen-single{
+    .group-name{
+      margin-right: 4px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-weight: normal;
+      color: #999999;
+      &:after {
+        content: ":";
+        padding-left: 2px;
+        vertical-align: top;
+      }
+    }
+  }
+}
+/* @end */
+
+/* @group Single Chosen */
+.chosen-container-single{
+  .chosen-single {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: $form-select-padding-y $form-select-indicator-padding $form-select-padding-y $form-select-padding-x;
+    -moz-padding-start: subtract($form-select-padding-x, 3px); // See https://github.com/twbs/bootstrap/issues/32636
+    font-family: $form-select-font-family;
+    @include font-size($form-select-font-size);
+    font-weight: $form-select-font-weight;
+    line-height: $form-select-line-height;
+    color: $form-select-color;
+    background-color: $form-select-bg;
+    background-image: escape-svg($form-select-indicator);
+    background-repeat: no-repeat;
+    background-position: $form-select-bg-position;
+    background-size: $form-select-bg-size;
+    border: $form-select-border-width solid $form-select-border-color;
+    @include border-radius($form-select-border-radius, 0);
+    @include box-shadow($form-select-box-shadow);
+    @include transition($form-select-transition);
+    appearance: none;
+    text-decoration: none;
+    height: 40px;
+  }
+  .chosen-default {
+    color: #999;
+  }
+  .chosen-single span {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-right: 26px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .chosen-single-with-deselect span {
+    margin-right: 38px;
+  }
+  // .chosen-single abbr {
+  //   position: absolute;
+  //   top: 6px;
+  //   right: 26px;
+  //   display: block;
+  //   width: 12px;
+  //   height: 12px;
+  //   background: $chosen-sprite -42px 1px no-repeat;
+  //   font-size: 1px;
+  //   &:hover {
+  //     background-position: -42px -10px;
+  //   }
+  // }
+  &.chosen-disabled .chosen-single abbr:hover {
+    background-position: -42px -10px;
+  }
+  .chosen-single div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 18px;
+    height: 100%;
+    // b {
+    //   display: block;
+    //   width: 100%;
+    //   height: 100%;
+    //   background: $chosen-sprite no-repeat 0px 2px;
+    // }
+  }
+  // .chosen-search {
+  //   position: relative;
+  //   z-index: 1010;
+  //   margin: 0;
+  //   padding: 3px 4px;
+  //   white-space: nowrap;
+
+  //   input[type="text"] {
+  //     margin: 1px 0;
+  //     padding: 4px 20px 4px 5px;
+  //     width: 100%;
+  //     height: auto;
+  //     outline: 0;
+  //     border: 1px solid #aaa;
+  //     background: $chosen-sprite no-repeat 100% -20px;
+  //     font-size: 1em;
+  //     font-family: sans-serif;
+  //     line-height: normal;
+  //     border-radius: 0;
+  //   }
+  // }
+  .chosen-drop {
+    margin-top: -1px;
+    // border-radius: 0 0 4px 4px;
+    background-clip: padding-box;
+  }
+  &.chosen-container-single-nosearch .chosen-search {
+    position: absolute;
+    clip: rect(0,0,0,0);
+    clip-path: inset(100% 100%);
+  }
+}
+/* @end */
+
+/* @group Results */
+.chosen-container .chosen-results {
+  color: #444;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0 4px 4px 0;
+  padding: 0 0 0 4px;
+  max-height: 240px;
+  -webkit-overflow-scrolling: touch;
+  li {
+    display: none;
+    margin: 0;
+    padding: 5px 6px;
+    list-style: none;
+    // line-height: 15px;
+    word-wrap: break-word;
+    -webkit-touch-callout: none;
+    &.active-result {
+      display: list-item;
+      cursor: pointer;
+    }
+    &.disabled-result {
+      display: list-item;
+      color: #ccc;
+      cursor: default;
+    }
+    &.highlighted {
+      background-color: $primary;
+      color: #fff;
+    }
+    &.no-results {
+      color: #777;
+      display: list-item;
+      background: #f4f4f4;
+    }
+    &.group-result {
+      display: list-item;
+      font-weight: bold;
+      cursor: default;
+    }
+    &.group-option {
+      padding-left: 15px;
+    }
+    em {
+      font-style: normal;
+      text-decoration: underline;
+    }
+  }
+}
+/* @end */
+
+/* @group Active  */
+.chosen-container-active{
+  .chosen-single {
+    border: $form-select-border-width solid $form-select-border-color;
+    outline: 0;
+    // box-shadow: 0 0 5px rgba(#000,.3);
+    box-shadow: 0 0 5px rgba(#000,.15);
+  }
+  &.chosen-with-drop{
+    .chosen-single {
+      border: $form-select-border-width solid $form-select-border-color;
+      // -moz-border-radius-bottomright: 0;
+      // border-bottom-right-radius: 0;
+      // -moz-border-radius-bottomleft: 0;
+      // border-bottom-left-radius: 0;
+      // background-image: linear-gradient(#eee 20%, #fff 80%);
+      // box-shadow: 0 1px 0 #fff inset;
+    }
+    .chosen-single div {
+      border-left: none;
+      background: transparent;
+      b {
+        background-position: -18px 2px;
+      }
+    }
+  }
+  .chosen-choices {
+    border: 1px solid #5897fb;
+    box-shadow: 0 0 5px rgba(#000,.3);
+    li.search-field input[type="text"] {
+      color: #222 !important;
+    }
+  }
+}
+/* @end */
+
+/* @group Disabled Support */
+.chosen-disabled {
+  opacity: 0.5 !important;
+  cursor: default;
+  .chosen-single {
+    cursor: default;
+  }
+  .chosen-choices .search-choice .search-choice-close {
+    cursor: default;
+  }
+}
+/* @end */
+
+/* @group Retina compatibility */
+// @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
+//   .chosen-rtl .chosen-search input[type="text"],
+//   .chosen-container-single .chosen-single abbr,
+//   .chosen-container-single .chosen-single div b,
+//   .chosen-container-single .chosen-search input[type="text"],
+//   .chosen-container-multi .chosen-choices .search-choice .search-choice-close,
+//   .chosen-container .chosen-results-scroll-down span,
+//   .chosen-container .chosen-results-scroll-up span {
+//     background-image: $chosen-sprite-retina !important;
+//     background-size: 52px 37px !important;
+//     background-repeat: no-repeat !important;
+//   }
+// }
+/* @end */
+
+/*
+  Chosen - (harvesthq.github.com/chosen/) responsive css hack for Bootstrap (twitter.github.com/bootstrap)
+  https://gist.github.com/benblodgett/4627725
+*/
+[class*="col-"] .chosen-container {
+  width: 100% !important;
+}
+[class*="col-"] .chosen-container .chosen-drop {
+  width: 100% !important;
+}

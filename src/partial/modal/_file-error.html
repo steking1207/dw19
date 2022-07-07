@@ -1,0 +1,38 @@
+<div class="modal fade" id="@@id" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content shadow">
+            @@include('unit/_modal-header.html',{
+                title:'Error'
+            })
+            <div class="modal-body py-40">
+                <div class="text-center">
+                    <p class="lead">Oh sorry !</p>
+                    <p>
+                        @@p1
+                    </p>
+                    <p class="m-0">
+                        @@p2
+                    </p>
+                    @@if(context.placeholder){
+                    <div class="row justify-content-center mt-40">
+                        <div class="col-12 col-lg-6">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="@@placeholder">
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                @@include('../comp/_btn-group.html',{
+                    col:'-12', colLg:'-6',
+                    group: {
+                        item: [
+                            {btnStyle:'outline-secondary', btnHref:'upload-report.html', btnLabel:'Report',},
+                            {btnStyle:'primary', btnColor:'white', btnHref:'@@btn2Href', btnLabel:'@@btn2Label', dismiss:'true',},
+                        ],
+                    },
+                })
+            </div>
+        </div>
+    </div>
+</div>
