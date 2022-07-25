@@ -32,7 +32,7 @@
 :root {
   --swiper-theme-color: $primary;
   --swiper-navigation-color: $primary;
-  --swiper-navigation-size: 16px;
+  --swiper-navigation-size: 2rem;
 }
 .swiper {
   margin-left: auto;
@@ -359,6 +359,13 @@
       content: "next";
   }
 }
+.swiper-button-prev,
+.swiper-button-next {
+  &:hover,
+  &:active {
+    color: $primary;
+  }
+}
 .swiper-button-prev.swiper-button-disabled {
   opacity: 0.35;
   cursor: auto;
@@ -486,9 +493,9 @@
 }
 .swiper-pagination-bullet {
   margin: 0 6px;
-  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 14px));
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 26px));
   // height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 3px));
-  height: 34px;
+  height: 40px;
   position: relative;
   &:before{
       position: absolute;
@@ -497,21 +504,22 @@
       left:auto;
       right:auto;
       margin-left: 3px;
-      width: 8px;
-      height: 8px;
+      width: 14px;
+      height: 14px;
       background-color: #aaa;
       border-radius: 50%;
   }
   &:after{
       position: absolute;
       content:'';
-      top:20px;
+      top:23px;
       left:auto;
       right:auto;
+      margin-left: -3px;
       width: 0;
       height: 14px;
       background-color: $black;
-      border-radius: 50%;
+      border-radius: 10px;
       // transition: width .2s;;
   }
   display: inline-block;

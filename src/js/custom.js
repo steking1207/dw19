@@ -6,6 +6,7 @@ const swiperKv = new Swiper(".swiper-kv", {
     autoplay: {
         delay: 5000,
     },
+    loop: true,
 });
 const swiperProd = new Swiper(".swiper-product", {
     spaceBetween: 24,
