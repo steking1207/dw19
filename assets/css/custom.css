@@ -167,6 +167,12 @@ body {
   .btn-google:hover, .btn-google:focus {
     background-color: #b92124; }
 
+:target {
+  display: block;
+  position: relative;
+  top: -60px;
+  visibility: hidden; }
+
 .file-input {
   position: absolute;
   left: 0;
