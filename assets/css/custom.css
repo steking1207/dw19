@@ -213,6 +213,14 @@ body {
     .nav-main .navbar-nav .nav-item:last-child, .nav-main .navbar-nav .nav-item:only-child {
       border: 0 !important; } }
 
+.navbar-collapse .nav-link:hover, .navbar-collapse .nav-link:focus {
+  color: #000; }
+
+footer a.text-white:hover, footer a.text-white:focus {
+  text-decoration: underline !important; }
+  footer a.text-white:hover i, footer a.text-white:focus i {
+    opacity: .8 !important; }
+
 .bg-admin {
   background-size: cover;
   background-repeat: no-repeat; }
