@@ -24,6 +24,26 @@
         }
     }
 }
+.navbar-collapse {
+    .nav-link {
+        &:hover,
+        &:focus {
+            color: $black;
+        }
+    }
+}
+footer {
+    a.text-white {
+        &:hover,
+        &:focus {
+            i {
+                opacity: .8 !important;
+            }
+            text-decoration: underline !important;
+        }
+    }
+}
+
 // @media (max-width: 992px) {
 //     .navbar-collapse {
 //         position: fixed;
