@@ -42,8 +42,8 @@
                                 @@include('../partial/comp/_forms.html',{
                                     group: {
                                         item: [
-                                            {col:'-12', colLg:'-4', id:'inputPhone', type:'number', prefixLabel:'+66', label:'Phone Number', placeholder:'eg. 0809999999', href:'#'},
-                                            {col:'-12', colLg:'-4', id:'inputEmail', type:'email', label:'Email', placeholder:'eg. dw19@gmail.com', href:'#'},
+                                            {col:'-12', colLg:'-4', id:'inputPhone', type:'number', prefixLabel:'+66', label:'Phone Number', value:'0809999999', href:'#', disabled:true},
+                                            {col:'-12', colLg:'-4', id:'inputEmail', type:'email', label:'Email', value:'dw19@gmail.com', href:'#', disabled:true},
                                             {col:'-12', colLg:'-4', id:'inputGender', type:'select', label:'Gender', placeholder:'', opt1:'Choose...', opt2:'Male', opt3:'Female'},
                                         ],
                                     },
@@ -138,7 +138,15 @@
                 </div>
             </div>
         </main>
+
+        @@include('../partial/modal/_disclaimer.html')
         <!-- global -->
         @@include('../partial/global/_js.html')
+        <script>
+            var myModal = new bootstrap.Modal(document.getElementById("modalDisclaimer"), {});
+            document.onreadystatechange = function () {
+                myModal.show();
+            };
+        </script>
     </body>
 </html>

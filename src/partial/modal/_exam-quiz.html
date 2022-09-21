@@ -1,0 +1,38 @@
+<div class="modal fade" id="modalExamQuiz" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content shadow">
+            @@include('unit/_modal-header.html',{
+                title:'Quiz',
+            })
+            <div class="modal-body py-40">
+                <div class="row justify-content-center my-20">
+                    <div class="col-12 col-lg-10">
+                        <div class="h5 mb-20">
+                            2.What's your favorite food
+                        </div>
+                        <div class="row g-8">
+                            @@loop('unit/_exam-quiz-item.html', [
+                                {id:'radio1', label:'Pizza'},
+                                {id:'radio2', label:'Tuna Steak'},
+                                {id:'radio3', label:'Spaghetti'},
+                                {id:'radio4', label:'Grape Juice'},
+                                {id:'radio5', label:'Sausages'},
+                            ])
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                @@include('../comp/_btn-group.html',{
+                    col:'-12', colLg:'-6',
+                    group: {
+                        item: [
+                            {btnStyle:'outline-secondary', btnHref:'javascript:void();', btnLabel:'Return', dismiss:'true',},
+                            {btnStyle:'primary', btnColor:'white', btnHref:'javascript:void();', btnLabel:'Submit', dismiss:'true', target:'ModalExamAns'},
+                        ],
+                    },
+                })
+            </div>
+        </div>
+    </div>
+</div>

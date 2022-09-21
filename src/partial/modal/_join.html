@@ -1,0 +1,182 @@
+<div class="modal fade" id="modalJoin" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content shadow">
+            <div class="modal-header pb-0">
+                <ul class="nav nav-tabs nav-fill w-100 border-bottom-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-pane-join" href="javascript:void();">
+                            <span class="h5">Join</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-pane-login" href="javascript:void();">
+                            <span class="h5">Login</span>
+                        </a>
+                    </li>
+                </ul>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body py-40">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="tab-pane-join">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-12">
+                                    <!-- <div class="h5 text-center mb-28">
+                                        Already have account? <a href="login.html">Login</a>
+                                    </div> -->
+                                    <div class="d-grid gap-28">
+                                        @@include('../unit/_btn-log.html',{
+                                            brand:'google',
+                                            href:'#',
+                                            img:'/assets/img/ui/icon-btn-google.svg',
+                                            label:'Register Using Google'
+                                        })
+                                        @@include('../unit/_btn-log.html',{
+                                            brand:'facebook',
+                                            href:'#',
+                                            img:'/assets/img/ui/icon-btn-facebook.svg',
+                                            label:'Register Using Facebook'
+                                        })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center my-40">
+                                <!-- <div class="col-12 text-center">
+                                    <div class="mb-28">or</div>
+                                    <div class="border-cross">
+                                        <span>Join using Phone number + Email</span>
+                                    </div>
+                                </div> -->
+                                <div class="col-12 text-center">
+                                    <div class="border-cross">
+                                        <span>or</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-12">
+                                    <div class="row g-16 mb-40">
+                                        @@include('../comp/_forms.html',{
+                                            group: {
+                                                item: [
+                                                    {col:'-12', required:true, id:'inputPhone', type:'number', prefixLabel:'+66', label:'Phone Number', placeholder:'eg. 0809999999',},
+                                                    {col:'-12', required:true, id:'inputEmail', type:'email', label:'Email', placeholder:'eg. dw19@gmail.com',},
+                                                ],
+                                            },
+                                        })
+                                        <div class="col-12">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="checkPolicy" disabled>
+                                                    <label class="form-check-label" for="checkPolicy">
+                                                        I have read and agree to DW19’s
+                                                        <a href="#" class="text-nowrap" data-bs-toggle="modal" data-bs-target="#modalPolicy">
+                                                            Privacy Policy
+                                                        </a>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="checkTerms" disabled>
+                                                    <label class="form-check-label" for="checkTerms">
+                                                        I have read and agree to DW19’s
+                                                        <a href="#" class="text-nowrap" data-bs-toggle="modal" data-bs-target="#modalTerms">
+                                                            Terms &amp; Condition
+                                                        </a>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="checkPromo">
+                                                    <label class="form-check-label" for="checkPromo">
+                                                        I agree to receive your special offer and promotions via email
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @@include('../comp/_btn-group.html',{
+                                        col:'-12',
+                                        group: {
+                                            item: [
+                                                {btnStyle:'primary', btnColor:'white', btnHref:'regist-form.html', btnLabel:'Join',},
+                                            ],
+                                        },
+                                    })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-pane-login">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-12">
+                                    <div class="d-grid gap-28">
+                                        @@include('../unit/_btn-log.html',{
+                                            brand:'google',
+                                            href:'#',
+                                            img:'/assets/img/ui/icon-btn-google.svg',
+                                            label:'Register Using Google'
+                                        })
+                                        @@include('../unit/_btn-log.html',{
+                                            brand:'facebook',
+                                            href:'#',
+                                            img:'/assets/img/ui/icon-btn-facebook.svg',
+                                            label:'Register Using Facebook'
+                                        })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center my-40">
+                                <!-- <div class="col-12 text-center">
+                                    <div class="mb-28">or</div>
+                                    <div class="border-cross">
+                                        <span>Login using Phone number</span>
+                                    </div>
+                                </div> -->
+                                <div class="col-12 text-center">
+                                    <div class="border-cross">
+                                        <span>or</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-12">
+                                    <div class="row g-16 mb-40">
+                                        @@include('../comp/_forms.html',{
+                                            password:true,
+                                            group: {
+                                                item: [
+                                                    {col:'-12', required:true, id:'inputPhone', type:'number', prefixLabel:'+66', label:'Phone Number', placeholder:'eg. 0809999999',},
+                                                    {col:'-12', required:true, id:'inputEmail', type:'email', label:'Email', placeholder:'eg. dw19@gmail.com',},
+                                                ],
+                                            },
+                                        })
+                                    </div>
+                                    @@include('../comp/_btn-group.html',{
+                                        col:'-12',
+                                        group: {
+                                            item: [
+                                                {btnStyle:'primary', btnColor:'white', btnHref:'regist-form.html', btnLabel:'Login',},
+                                            ],
+                                        },
+                                    })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</div>

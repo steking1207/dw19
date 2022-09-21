@@ -2,11 +2,17 @@
 ### 首頁-未登入 (<a href="https://steking1207.github.io/dw19/index.html" target="_blank">連結</a>)
 * KV圖片建議尺寸: Desktop 1920x640(3:1)、Mobile 640x640(1:1)
     - 2022/7/7: 修正KV在Firefox及Safari未出現的問題
-* Activity內文行數限制: 標題2行、內文3行
+* Activity內文行數限制: 標題2行、內文3行，圖片建議尺寸800x530
+    - <font color=#f00>2022/9/21 圖片建議尺寸修改為16:9 (800x450)</font>
 * Gift圖片建議尺寸: 220x220(1:1)
+    - <font color=#f00>2022/9/21 左右捲動按鈕樣式調整</font>
 * 浮動廣告圖片建議尺寸: 100x100(1:1)
 * Messenger功能需由粉專設定，此處只能先做假按鈕示意
 * 點選Header右上方Upload可見Unlock的popup
+* <font color=#f00>2022/9/21</font>
+    - Join及Login改為Modal顯示
+    - 增加Policy及Terms Modal
+    - 增加Quiz Modal
 ---
 ### 首頁-已登入 (<a href="https://steking1207.github.io/dw19/index-logged.html" target="_blank">連結</a>)
 * User圖示建議尺寸: 80x80(1:1)
@@ -17,6 +23,9 @@
 ---
 ### 會員資料填寫 (<a href="https://steking1207.github.io/dw19/regist-form.html" target="_blank">連結</a>)
 * Address改為直接選擇切換
+* <font color=#f00>2022/9/21</font>
+    - 增加頁面宣告Modal
+    - Phone Number及Email欄位改為Dsiabled (無法修改)
 ---
 ### 登入 (<a href="https://steking1207.github.io/dw19/login.html" target="_blank">連結</a>)
 ---

@@ -6,6 +6,7 @@
             nav2Label:'Promotion',
             nav3Label:'Learn About DW',
             nav4Label:'Check Gift',
+            navQuizLabel:'Go To Test',
         })
         <main>
             @@include('../partial/page/index/_kv.html')
@@ -17,7 +18,25 @@
         @@include('../partial/global/_footer.html')
         @@include('../partial/comp/_banner.html')
         @@include('../partial/comp/_quicknav.html')
+
+        @@include('../partial/modal/_exam-quiz.html')
+        @@include('../partial/modal/_exam-ans.html')
+        @@include('../partial/modal/_join.html')
+        @@include('../partial/modal/_rule.html',{
+            id:'modalPolicy',
+            title:'Privacy Policy'
+        })
+        @@include('../partial/modal/_rule.html',{
+            id:'modalTerms',
+            title:'Terms & Condition'
+        })
         <!-- global -->
         @@include('../partial/global/_js.html')
+        <!-- <script>
+            var myModal = new bootstrap.Modal(document.getElementById("ModalExamAns"), {});
+            document.onreadystatechange = function () {
+                myModal.show();
+            };
+        </script> -->
     </body>
 </html>

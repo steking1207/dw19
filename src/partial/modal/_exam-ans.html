@@ -1,0 +1,29 @@
+<div class="modal fade" id="ModalExamAns" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content shadow">
+            <div class="modal-body py-40">
+                <div class="row justify-content-center my-20">
+                    <div class="col-12 col-lg-10 text-center">
+                        <img class="img-fluid mx-auto" src="https://via.placeholder.com/1920x1000/efc" alt="Congratulations" style="max-height: 150px;">
+                        <div class="h3 my-20">
+                            60 / 100
+                        </div>
+                        <div class="h5">
+                            Congratulations on passing the quiz!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                @@include('../comp/_btn-group.html',{
+                    col:'-12', colLg:'-6',
+                    group: {
+                        item: [
+                            {btnStyle:'primary', btnColor:'white', btnHref:'javascript:void();', btnLabel:'Close', dismiss:'true'},
+                        ],
+                    },
+                })
+            </div>
+        </div>
+    </div>
+</div>

@@ -9,7 +9,7 @@
             @@if(context.prefixLabel){
                 <span class="input-group-text">@@prefixLabel</span>
             }
-                <input type="@@type" class="form-control @@if(context.affixLabel){border-end-0}" id="@@id" placeholder="@@placeholder" @@if(context.required===true){required}>
+                <input type="@@type" class="form-control @@if(context.affixLabel){border-end-0}" id="@@id" @@if(context.value){value="@@value"} @@if(context.placeholder){placeholder="@@placeholder"} @@if(context.required===true){required} @@if(context.disabled===true){disabled}>
             @@if(context.affixLabel){
                 <a class="input-group-text border-start-0 bg-white toggle-password" href="javascript:void();" toggle="#@@id">@@affixLabel</a>
             }

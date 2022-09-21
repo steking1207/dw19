@@ -1,0 +1,32 @@
+<div class="modal fade" id="@@id" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content shadow">
+            @@include('unit/_modal-header.html',{
+                title:'@@title',
+                target:'modalJoin'
+            })
+            <div class="modal-body py-40">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum neque egestas congue quisque egestas. Auctor elit sed vulputate mi sit amet mauris. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget. Sit amet mattis vulputate enim nulla aliquet porttitor lacus. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices neque ornare aenean euismod elementum nisi quis eleifend quam. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. Ac turpis egestas integer eget aliquet. Amet consectetur adipiscing elit pellentesque. Accumsan tortor posuere ac ut. Ac odio tempor orci dapibus. Tincidunt eget nullam non nisi est.<br><br>
+
+                Risus viverra adipiscing at in tellus integer feugiat scelerisque. Cras ornare arcu dui vivamus arcu felis bibendum ut tristique. Risus in hendrerit gravida rutrum quisque. Risus viverra adipiscing at in tellus integer feugiat. Elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Diam quam nulla porttitor massa id neque aliquam. Sodales ut eu sem integer vitae justo eget. Ut venenatis tellus in metus vulputate. Pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Etiam sit amet nisl purus in mollis nunc. Malesuada pellentesque elit eget gravida cum sociis. Morbi tincidunt augue interdum velit euismod in. Velit aliquet sagittis id consectetur purus ut. Sit amet risus nullam eget felis eget. Porta lorem mollis aliquam ut porttitor leo a diam sollicitudin. Convallis posuere morbi leo urna.<br><br>
+
+                Et pharetra pharetra massa massa ultricies. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam. Enim sit amet venenatis urna cursus eget. Felis donec et odio pellentesque diam volutpat commodo sed egestas. Et odio pellentesque diam volutpat commodo. Sed tempus urna et pharetra pharetra massa massa. Auctor elit sed vulputate mi sit. Auctor urna nunc id cursus metus. Dolor purus non enim praesent elementum. Non odio euismod lacinia at quis risus sed. Vitae congue eu consequat ac. Lacus vestibulum sed arcu non odio. Tortor at risus viverra adipiscing at in tellus. Vel risus commodo viverra maecenas. Eros in cursus turpis massa tincidunt dui ut ornare lectus.<br><br>
+
+                Nullam vehicula ipsum a arcu cursus vitae. Tellus rutrum tellus pellentesque eu tincidunt tortor. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Eu facilisis sed odio morbi quis commodo odio. Amet cursus sit amet dictum sit amet justo. Purus faucibus ornare suspendisse sed nisi. Commodo nulla facilisi nullam vehicula ipsum a. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Tincidunt ornare massa eget egestas purus viverra accumsan in. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Placerat vestibulum lectus mauris ultrices eros in cursus turpis massa. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam purus. Massa id neque aliquam vestibulum morbi blandit. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Pellentesque nec nam aliquam sem et tortor. Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget arcu. Neque sodales ut etiam sit amet nisl purus in mollis. Mi in nulla posuere sollicitudin aliquam. Quis blandit turpis cursus in hac.<br><br>
+
+                Ultrices vitae auctor eu augue ut. Convallis posuere morbi leo urna molestie at elementum eu facilisis. Eros donec ac odio tempor orci dapibus ultrices in. Eget nulla facilisi etiam dignissim diam quis enim lobortis. Mi sit amet mauris commodo. Et malesuada fames ac turpis egestas integer eget aliquet nibh. Amet facilisis magna etiam tempor orci. Gravida dictum fusce ut placerat orci nulla pellentesque. Tristique senectus et netus et malesuada fames ac turpis egestas. Cursus mattis molestie a iaculis at erat. Et malesuada fames ac turpis egestas maecenas. Sed turpis tincidunt id aliquet risus feugiat in. Elit pellentesque habitant morbi tristique senectus et netus. Nullam vehicula ipsum a arcu cursus vitae congue mauris.
+            </div>
+            <div class="modal-footer justify-content-center">
+                @@include('../comp/_btn-group.html',{
+                    col:'-12', colLg:'-6',
+                    group: {
+                        item: [
+                            {btnStyle:'outline-secondary', btnHref:'javascript:void();', btnLabel:'Close', dismiss:'true', target:'modalJoin'},
+                            {btnStyle:'primary', btnColor:'white', btnHref:'javascript:void();', btnLabel:'Confirm', dismiss:'true', target:'modalJoin'},
+                        ],
+                    },
+                })
+            </div>
+        </div>
+    </div>
+</div>
