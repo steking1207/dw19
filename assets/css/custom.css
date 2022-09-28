@@ -634,6 +634,21 @@ footer a.text-white:hover, footer a.text-white:focus {
   width: 1px;
   height: var(--swiper-virtual-size); }
 
+/* 5.4.3 css */
+.swiper-container-multirow > .swiper-wrapper {
+  flex-wrap: wrap; }
+
+.swiper-container-multirow-column > .swiper-wrapper {
+  flex-wrap: wrap;
+  flex-direction: column; }
+
+.swiper-grid > .swiper-wrapper {
+  flex-wrap: wrap; }
+
+.swiper-grid-column > .swiper-wrapper {
+  flex-wrap: wrap;
+  flex-direction: column; }
+
 .swiper-button-prev {
   left: 10px;
   right: auto; }
@@ -859,14 +874,6 @@ button.swiper-pagination-bullet {
 
 .swiper-horizontal.swiper-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   transition: 200ms transform, 200ms right; }
-
-/* 5.4.3 css */
-.swiper-container-multirow > .swiper-wrapper {
-  flex-wrap: wrap; }
-
-.swiper-container-multirow-column > .swiper-wrapper {
-  flex-wrap: wrap;
-  flex-direction: column; }
 
 /* @group Base */
 .chosen-container {
