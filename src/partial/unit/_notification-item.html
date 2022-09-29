@@ -1,0 +1,20 @@
+<div class="list-group-item d-flex justify-content-between">
+    <div class="row g-8">
+        <div class="col-auto">
+            @@if(context.state=='new'){
+            <img class="of-contain wh-20" src="@@img" alt="@@label">
+            }
+            @@if(context.state=='success'){
+            <i class="bi bi-check-circle-fill text-success"></i>
+            }
+        </div>
+        <div class="col">
+            @@label
+            @@if(context.state=='new'){
+            <span class="position-absolute top-0 end-0 mt-4 me-4 p-8 bg-danger border border-light rounded-circle">
+                <span class="visually-hidden">New</span>
+            </span>
+            }
+        </div>
+    </div>
+</div>

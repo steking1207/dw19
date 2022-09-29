@@ -3,7 +3,7 @@
         @@include('../partial/global/_header.html',{
             state:'logged',
             nav1Label:'Mission',
-            nav1Badge:'99+',
+            nav1Badge:true,
             nav2Label:'Promotion',
             nav3Label:'News & Announvement',
             nav4Label:'learn about DW',
@@ -22,8 +22,15 @@
         @@include('../partial/comp/_banner.html')
         @@include('../partial/comp/_quicknav.html')
 
+        @@include('../partial/modal/_mission.html')
         @@include('../partial/modal/_unlock.html')
         <!-- global -->
         @@include('../partial/global/_js.html')
+        <script>
+            // var myModal = new bootstrap.Modal(document.getElementById("modalMission"), {});
+            // document.onreadystatechange = function () {
+            //     myModal.show();
+            // };
+        </script>
     </body>
 </html>

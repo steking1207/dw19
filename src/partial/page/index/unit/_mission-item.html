@@ -1,30 +1,42 @@
-<div class="col-12 col-md-6 col-lg-3 my-12">
+<div class="col-12 col-lg-6 my-12">
     <div class="border">
         <div class="p-16">
-            <div class="row gx-12 gy-32 align-items-center row-cols-2">
-                <div class="col-auto">
-                    <img class="of-contain wh-80" src="@@img" alt="@@title">
+            <div class="row gx-12 gy-24 row-cols-2">
+                <div class="col-4 col-lg-2">
+                    <img class="of-contain wh-80 mx-auto" src="@@img" alt="@@title">
                 </div>
-                <div class="col-8">
-                    <div class="h5 text-row-1 mb-4">@@title</div>
+                <div class="col-8 col-lg-10">
+                    <div class="h5 text-row-1 mb-4">
+                        <a class="text-decoration-none" href="javscript:void();" data-bs-toggle="modal" data-bs-target="#modalMission">@@title</a>
+                    </div>
                     <div class="text-secondary text-row-2">
                         @@desc
                     </div>
-                </div>
-                <div class="col-9">
-                    <div class="progress rounded">
-                        <div class="progress-bar @@if(context.progress=='100'){bg-success} @@if(context.progress!='100'){progress-bar-striped progress-bar-animated}" role="progressbar" style="width: @@progress%;" aria-valuenow="@@progress" aria-valuemin="0" aria-valuemax="100">
-                            @@progress%
+                    <div class="progress position-relative rounded my-8" style="height: 16px;">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: @@progress%;" aria-valuenow="@@progress" aria-valuemin="0" aria-valuemax="100">
+                            <div class="position-absolute w-100 d-flex justify-content-center">
+                                <div class="text-dark">@@pts</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-auto lh-1 text-end">
-                    <span class="lead">@@pts</span> <span class="fs-small">pts</span>
+                    <div class="progress position-relative rounded my-8" style="height: 16px;">
+                        <div class="progress-bar @@if(context.bar2===false){bg-light} @@if(context.bar2===true){bg-success}" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                            @@if(context.bar2===true){
+                            <div class="position-absolute w-100 d-flex justify-content-center">
+                                X2
+                            </div>
+                            }
+                        </div>
+                    </div>
+                    <div class="text-start">
+                        <small>
+                            <div class="d-block d-lg-inline">Expire in <span class="text-danger">22</span> days</div>
+                            <div class="d-none d-lg-inline">|</div>
+                            <div class="d-block d-lg-inline">Until <span class="text-danger">30/09/2022</span></div>
+                        </small>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="border-top py-8">
-            <div class="text-primary text-uppercase text-center">@@state</div>
         </div>
     </div>
 </div>

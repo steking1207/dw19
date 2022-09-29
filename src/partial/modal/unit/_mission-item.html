@@ -1,0 +1,33 @@
+<li class="list-group-item @@if(context.state=='success'){list-group-item-success}">
+    <div class="row align-items-center justify-content-center">
+        <div class="col-12 col-lg">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-12 col-lg">
+                    <div class="d-flex">
+                        <span class="me-8">
+                            @@if(context.state=='success'){
+                            <i class="bi bi-check-circle-fill text-success"></i>
+                            }
+                            @@if(context.state=='process'){
+                            <i class="bi bi-clock text-secondary"></i>
+                            }
+                            @@if(context.state=='bonus'){
+                            <i class="bi bi-gift text-secondary"></i>
+                            }
+                        </span>
+                        @@title
+                    </div>
+                </div>
+                @@if(context.value){
+                <div class="col-12 col-lg-auto my-8 my-lg-0 text-center">
+                    <div class="fs-small text-secondary">@@value</div>    
+                </div>
+                }
+            </div>
+            
+        </div>
+        <div class="col-6 col-lg-2">
+            <div class="bg-light border rounded text-center">@@pts</div>
+        </div>
+    </div>
+</li>
