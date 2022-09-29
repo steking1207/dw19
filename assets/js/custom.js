@@ -9,7 +9,7 @@ const swiperKv = new Swiper(".swiper-kv", {
     loop: true,
 });
 const swiperProd = new Swiper(".swiper-product", {
-    spaceBetween: 24,
+    // spaceBetween: 24,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -24,6 +24,7 @@ const swiperProd = new Swiper(".swiper-product", {
         1024: {
             slidesPerView: 4,
             slidesPerGroup: 4,
+            slidesPerColumn: 1,
         },
     },
 });

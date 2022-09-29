@@ -38,12 +38,76 @@
                         <div class="nav-main w-100 d-flex align-items-xl-center justify-content-xl-between bg-white">
                             <ul class="navbar-nav me-xl-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link p-16 text-center position-relative" href="#benefit">
-                                        Mission
-                                        
-                                        <span class="position-absolute top-0 end-0 mt-4 mt-xl-0 me-4 badge text-bg-danger rounded-pill">99+</span>
-                                        
-                                    </a>
+                                    
+                                    
+                                    <div class="dropdown">
+                                        <a class="nav-link p-16 text-center dropdown-toggle position-relative" href="#" data-bs-toggle="dropdown">
+                                            Mission
+                                            <span class="position-absolute top-0 end-0 mt-4 mt-xl-0 me-4 badge text-bg-danger rounded-pill">99+</span>
+                                        </a>
+                                        <div class="dropdown-menu shadow" style="min-width: 360px;">
+                                            <div class="d-flex align-items-center justify-content-between px-8 py-4">
+                                                <div class="h5 m-0">Notification</div>
+                                                <a class="btn btn-sm btn-outline-primary rounded" href="#">Mark all as read</a>
+                                            </div>
+                                            <hr class="dropdown-divider mb-0">
+                                            <div class="list-group list-group-flush">
+                                                <a href="#" class="list-group-item list-group-item-action list-group-item-primary text-center">
+                                                    <i class="bi bi-house me-4"></i> Go to Mission Center
+                                                </a>
+                                                <div class="list-group-item d-flex justify-content-between">
+                                                    <div class="row g-8">
+                                                        <div class="col-auto">
+                                                            
+                                                            <img class="of-contain wh-20" src="https://via.placeholder.com/180x70/fc0" alt="Your mission #1 Almost expire within 2 days">
+                                                            
+                                                            
+                                                        </div>
+                                                        <div class="col">
+                                                            Your mission #1 Almost expire within 2 days
+                                                            
+                                                            <span class="position-absolute top-0 end-0 mt-4 me-4 p-8 bg-danger border border-light rounded-circle">
+                                                                <span class="visually-hidden">New</span>
+                                                            </span>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div><div class="list-group-item d-flex justify-content-between">
+                                                    <div class="row g-8">
+                                                        <div class="col-auto">
+                                                            
+                                                            <img class="of-contain wh-20" src="assets/img/uploads/img-mission-03.png" alt="New Mission For you!">
+                                                            
+                                                            
+                                                        </div>
+                                                        <div class="col">
+                                                            New Mission For you!
+                                                            
+                                                            <span class="position-absolute top-0 end-0 mt-4 me-4 p-8 bg-danger border border-light rounded-circle">
+                                                                <span class="visually-hidden">New</span>
+                                                            </span>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div><div class="list-group-item d-flex justify-content-between">
+                                                    <div class="row g-8">
+                                                        <div class="col-auto">
+                                                            
+                                                            
+                                                            <i class="bi bi-check-circle-fill text-success"></i>
+                                                            
+                                                        </div>
+                                                        <div class="col">
+                                                            Congratulations! Mission #2 Completed
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                        </div>
+                                    </div>
+                                    
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link p-16 text-center btn-anchor" href="#activity">
@@ -137,7 +201,10 @@
                     <div class="row justify-content-center">
                         <div class="col-12 col-lg-5 my-16">
                             <div class="border d-flex flex-column h-100">
-                                <div class="mb-auto p-8 text-end">
+                                <div class="mb-auto p-8 d-flex justify-content-between">
+                                    <a href="showcase-list.html">
+                                        <i class="bi bi-trophy-fill"></i> Achievement Showcase
+                                    </a>
                                     <a href="#">Log out</a>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-center my-auto px-20 py-40">
@@ -405,8 +472,9 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="swiper-button-prev d-none d-lg-block"></div>
-                            <div class="swiper-button-next d-none d-lg-block"></div>
+                            
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
                         </div>
                     </div>
                     <div class="text-center">
@@ -420,120 +488,160 @@
                         <span class="text-primary">Ongoing </span><span class="text-ci-dark">Missions</span>
                     </div>
                     <div class="row my-36">
-                        <div class="col-12 col-md-6 col-lg-3 my-12">
+                        <div class="col-12 col-lg-6 my-12">
                             <div class="border">
                                 <div class="p-16">
-                                    <div class="row gx-12 gy-32 align-items-center row-cols-2">
-                                        <div class="col-auto">
-                                            <img class="of-contain wh-80" src="https://via.placeholder.com/80x80" alt="Mission Name Mission Name">
+                                    <div class="row gx-12 gy-24 row-cols-2">
+                                        <div class="col-4 col-lg-2">
+                                            <img class="of-contain wh-80 mx-auto" src="https://via.placeholder.com/80x80" alt="Mission Name Mission Name">
                                         </div>
-                                        <div class="col-8">
-                                            <div class="h5 text-row-1 mb-4">Mission Name Mission Name</div>
+                                        <div class="col-8 col-lg-10">
+                                            <div class="h5 text-row-1 mb-4">
+                                                <a class="text-decoration-none" href="javscript:void();" data-bs-toggle="modal" data-bs-target="#modalMission">Mission Name Mission Name</a>
+                                            </div>
                                             <div class="text-secondary text-row-2">
                                                 Mission description Lorem Mission description Mission descriptionMission description
                                             </div>
-                                        </div>
-                                        <div class="col-9">
-                                            <div class="progress rounded">
-                                                <div class="progress-bar  progress-bar-striped progress-bar-animated" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                                    25%
+                                            <div class="progress position-relative rounded my-8" style="height: 16px;">
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 10%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="position-absolute w-100 d-flex justify-content-center">
+                                                        <div class="text-dark">10 / 100 pts</div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-auto lh-1 text-end">
-                                            <span class="lead">18</span> <span class="fs-small">pts</span>
+                                            <div class="progress position-relative rounded my-8" style="height: 16px;">
+                                                <div class="progress-bar  bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                    
+                                                    <div class="position-absolute w-100 d-flex justify-content-center">
+                                                        X2
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="text-start">
+                                                <small>
+                                                    <div class="d-block d-lg-inline">Expire in <span class="text-danger">22</span> days</div>
+                                                    <div class="d-none d-lg-inline">|</div>
+                                                    <div class="d-block d-lg-inline">Until <span class="text-danger">30/09/2022</span></div>
+                                                </small>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="border-top py-8">
-                                    <div class="text-primary text-uppercase text-center">In Program</div>
-                                </div>
                             </div>
-                        </div><div class="col-12 col-md-6 col-lg-3 my-12">
+                        </div><div class="col-12 col-lg-6 my-12">
                             <div class="border">
                                 <div class="p-16">
-                                    <div class="row gx-12 gy-32 align-items-center row-cols-2">
-                                        <div class="col-auto">
-                                            <img class="of-contain wh-80" src="https://via.placeholder.com/180x70/fc0" alt="Send Your Name to Space">
+                                    <div class="row gx-12 gy-24 row-cols-2">
+                                        <div class="col-4 col-lg-2">
+                                            <img class="of-contain wh-80 mx-auto" src="https://via.placeholder.com/180x70/fc0" alt="Send Your Name to Space">
                                         </div>
-                                        <div class="col-8">
-                                            <div class="h5 text-row-1 mb-4">Send Your Name to Space</div>
+                                        <div class="col-8 col-lg-10">
+                                            <div class="h5 text-row-1 mb-4">
+                                                <a class="text-decoration-none" href="javscript:void();" data-bs-toggle="modal" data-bs-target="#modalMission">Send Your Name to Space</a>
+                                            </div>
                                             <div class="text-secondary text-row-2">
                                                 Artemis is the name of NASAs program to return astronauts to the lunar surface.
                                             </div>
-                                        </div>
-                                        <div class="col-9">
-                                            <div class="progress rounded">
-                                                <div class="progress-bar  progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                                    80%
+                                            <div class="progress position-relative rounded my-8" style="height: 16px;">
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="position-absolute w-100 d-flex justify-content-center">
+                                                        <div class="text-dark">50 / 60 pts</div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-auto lh-1 text-end">
-                                            <span class="lead">50</span> <span class="fs-small">pts</span>
+                                            <div class="progress position-relative rounded my-8" style="height: 16px;">
+                                                <div class="progress-bar bg-light " role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="text-start">
+                                                <small>
+                                                    <div class="d-block d-lg-inline">Expire in <span class="text-danger">22</span> days</div>
+                                                    <div class="d-none d-lg-inline">|</div>
+                                                    <div class="d-block d-lg-inline">Until <span class="text-danger">30/09/2022</span></div>
+                                                </small>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="border-top py-8">
-                                    <div class="text-primary text-uppercase text-center">In Program</div>
-                                </div>
                             </div>
-                        </div><div class="col-12 col-md-6 col-lg-3 my-12">
+                        </div><div class="col-12 col-lg-6 my-12">
                             <div class="border">
                                 <div class="p-16">
-                                    <div class="row gx-12 gy-32 align-items-center row-cols-2">
-                                        <div class="col-auto">
-                                            <img class="of-contain wh-80" src="assets/img/uploads/img-mission-03.png" alt="Send Your Name to Space">
+                                    <div class="row gx-12 gy-24 row-cols-2">
+                                        <div class="col-4 col-lg-2">
+                                            <img class="of-contain wh-80 mx-auto" src="assets/img/uploads/img-mission-03.png" alt="Send Your Name to Space">
                                         </div>
-                                        <div class="col-8">
-                                            <div class="h5 text-row-1 mb-4">Send Your Name to Space</div>
+                                        <div class="col-8 col-lg-10">
+                                            <div class="h5 text-row-1 mb-4">
+                                                <a class="text-decoration-none" href="javscript:void();" data-bs-toggle="modal" data-bs-target="#modalMission">Send Your Name to Space</a>
+                                            </div>
                                             <div class="text-secondary text-row-2">
                                                 Artemis is the name of NASAs program to return astronauts to the lunar surface.
                                             </div>
-                                        </div>
-                                        <div class="col-9">
-                                            <div class="progress rounded">
-                                                <div class="progress-bar bg-success " role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                                                    100%
+                                            <div class="progress position-relative rounded my-8" style="height: 16px;">
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="position-absolute w-100 d-flex justify-content-center">
+                                                        <div class="text-dark">70 / 70 pts</div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-auto lh-1 text-end">
-                                            <span class="lead">25</span> <span class="fs-small">pts</span>
+                                            <div class="progress position-relative rounded my-8" style="height: 16px;">
+                                                <div class="progress-bar bg-light " role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="text-start">
+                                                <small>
+                                                    <div class="d-block d-lg-inline">Expire in <span class="text-danger">22</span> days</div>
+                                                    <div class="d-none d-lg-inline">|</div>
+                                                    <div class="d-block d-lg-inline">Until <span class="text-danger">30/09/2022</span></div>
+                                                </small>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="border-top py-8">
-                                    <div class="text-primary text-uppercase text-center">In Program</div>
-                                </div>
                             </div>
-                        </div><div class="col-12 col-md-6 col-lg-3 my-12">
+                        </div><div class="col-12 col-lg-6 my-12">
                             <div class="border">
                                 <div class="p-16">
-                                    <div class="row gx-12 gy-32 align-items-center row-cols-2">
-                                        <div class="col-auto">
-                                            <img class="of-contain wh-80" src="https://via.placeholder.com/90x200/0fc" alt="Send Your Name to Space">
+                                    <div class="row gx-12 gy-24 row-cols-2">
+                                        <div class="col-4 col-lg-2">
+                                            <img class="of-contain wh-80 mx-auto" src="https://via.placeholder.com/90x200/0fc" alt="Send Your Name to Space">
                                         </div>
-                                        <div class="col-8">
-                                            <div class="h5 text-row-1 mb-4">Send Your Name to Space</div>
+                                        <div class="col-8 col-lg-10">
+                                            <div class="h5 text-row-1 mb-4">
+                                                <a class="text-decoration-none" href="javscript:void();" data-bs-toggle="modal" data-bs-target="#modalMission">Send Your Name to Space</a>
+                                            </div>
                                             <div class="text-secondary text-row-2">
                                                 Artemis is the name of NASAs program to return astronauts to the lunar surface.
                                             </div>
-                                        </div>
-                                        <div class="col-9">
-                                            <div class="progress rounded">
-                                                <div class="progress-bar  progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                                                    0%
+                                            <div class="progress position-relative rounded my-8" style="height: 16px;">
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="position-absolute w-100 d-flex justify-content-center">
+                                                        <div class="text-dark">0 / 30 pts</div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-auto lh-1 text-end">
-                                            <span class="lead">10</span> <span class="fs-small">pts</span>
+                                            <div class="progress position-relative rounded my-8" style="height: 16px;">
+                                                <div class="progress-bar  bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                    
+                                                    <div class="position-absolute w-100 d-flex justify-content-center">
+                                                        X2
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="text-start">
+                                                <small>
+                                                    <div class="d-block d-lg-inline">Expire in <span class="text-danger">22</span> days</div>
+                                                    <div class="d-none d-lg-inline">|</div>
+                                                    <div class="d-block d-lg-inline">Until <span class="text-danger">30/09/2022</span></div>
+                                                </small>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="border-top py-8">
-                                    <div class="text-primary text-uppercase text-center">In Program</div>
                                 </div>
                             </div>
                         </div>
@@ -681,6 +789,211 @@
             </div>
         </div>
 
+        <div class="modal fade" id="modalMission" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content shadow">
+                    <div class="modal-header align-items-start shadow">
+                        <div class="w-100">
+                            <div class="row gx-12 gy-24">
+                                <div class="col-4 col-lg-2">
+                                    <img class="of-contain wh-80 mx-auto" src="assets/img/uploads/img-mission-03.png" alt="Send Your Name to Space">
+                                </div>
+                                <div class="col-8 col-lg-10">
+                                    <div class="h5 text-row-1 mb-4">
+                                        Send Your Name to Space
+                                    </div>
+                                    <div class="text-secondary text-row-1">
+                                        Mission description Lorem Mission description Mission descriptionMission description
+                                    </div>
+                                    <div class="progress position-relative rounded my-8" style="height: 16px;">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 10%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="position-absolute w-100 d-flex justify-content-center">
+                                                <div class="text-dark">10 / 100 pts</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="progress position-relative rounded my-8" style="height: 16px;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="position-absolute w-100 d-flex justify-content-center">
+                                                X2
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-start">
+                                        <small>
+                                            <div class="d-block d-lg-inline">Expire in <span class="text-danger">22</span> days</div>
+                                            <div class="d-none d-lg-inline">|</div>
+                                            <div class="d-block d-lg-inline">Until <span class="text-danger">30/09/2022</span></div>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body py-40">
+                        <ul class="list-group">
+                            <li class="list-group-item ">
+                                <div class="row align-items-center justify-content-center">
+                                    <div class="col-12 col-lg">
+                                        <div class="row align-items-center justify-content-between">
+                                            <div class="col-12 col-lg">
+                                                <div class="d-flex">
+                                                    <span class="me-8">
+                                                        
+                                                        
+                                                        <i class="bi bi-clock text-secondary"></i>
+                                                        
+                                                        
+                                                    </span>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-12 col-lg-auto my-8 my-lg-0 text-center">
+                                                <div class="fs-small text-secondary">(18,000/29,000)</div>    
+                                            </div>
+                                            
+                                        </div>
+            
+                                    </div>
+                                    <div class="col-6 col-lg-2">
+                                        <div class="bg-light border rounded text-center">100 pts</div>
+                                    </div>
+                                </div>
+                            </li><li class="list-group-item ">
+                                <div class="row align-items-center justify-content-center">
+                                    <div class="col-12 col-lg">
+                                        <div class="row align-items-center justify-content-between">
+                                            <div class="col-12 col-lg">
+                                                <div class="d-flex">
+                                                    <span class="me-8">
+                                                        
+                                                        
+                                                        <i class="bi bi-clock text-secondary"></i>
+                                                        
+                                                        
+                                                    </span>
+                                                    Lorem ipsum dolor sit amet, consectetur
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-12 col-lg-auto my-8 my-lg-0 text-center">
+                                                <div class="fs-small text-secondary">(34,000/50,000)</div>    
+                                            </div>
+                                            
+                                        </div>
+            
+                                    </div>
+                                    <div class="col-6 col-lg-2">
+                                        <div class="bg-light border rounded text-center">150 pts</div>
+                                    </div>
+                                </div>
+                            </li><li class="list-group-item list-group-item-success">
+                                <div class="row align-items-center justify-content-center">
+                                    <div class="col-12 col-lg">
+                                        <div class="row align-items-center justify-content-between">
+                                            <div class="col-12 col-lg">
+                                                <div class="d-flex">
+                                                    <span class="me-8">
+                                                        
+                                                        <i class="bi bi-check-circle-fill text-success"></i>
+                                                        
+                                                        
+                                                        
+                                                    </span>
+                                                    Accumulate buy DW19 for 50,000 Volume
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-12 col-lg-auto my-8 my-lg-0 text-center">
+                                                <div class="fs-small text-secondary">(5,000/5,000)</div>    
+                                            </div>
+                                            
+                                        </div>
+            
+                                    </div>
+                                    <div class="col-6 col-lg-2">
+                                        <div class="bg-light border rounded text-center">50 pts</div>
+                                    </div>
+                                </div>
+                            </li><li class="list-group-item list-group-item-success">
+                                <div class="row align-items-center justify-content-center">
+                                    <div class="col-12 col-lg">
+                                        <div class="row align-items-center justify-content-between">
+                                            <div class="col-12 col-lg">
+                                                <div class="d-flex">
+                                                    <span class="me-8">
+                                                        
+                                                        <i class="bi bi-check-circle-fill text-success"></i>
+                                                        
+                                                        
+                                                        
+                                                    </span>
+                                                    Accumulate buy DW19 for 50,000 Volume
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-12 col-lg-auto my-8 my-lg-0 text-center">
+                                                <div class="fs-small text-secondary">(5,000/5,000)</div>    
+                                            </div>
+                                            
+                                        </div>
+            
+                                    </div>
+                                    <div class="col-6 col-lg-2">
+                                        <div class="bg-light border rounded text-center">50 pts</div>
+                                    </div>
+                                </div>
+                            </li><li class="list-group-item ">
+                                <div class="row align-items-center justify-content-center">
+                                    <div class="col-12 col-lg">
+                                        <div class="row align-items-center justify-content-between">
+                                            <div class="col-12 col-lg">
+                                                <div class="d-flex">
+                                                    <span class="me-8">
+                                                        
+                                                        
+                                                        
+                                                        <i class="bi bi-gift text-secondary"></i>
+                                                        
+                                                    </span>
+                                                    Buy DW19 more than 50,000 within September gain point X1.5
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+            
+                                    </div>
+                                    <div class="col-6 col-lg-2">
+                                        <div class="bg-light border rounded text-center">X 1.5</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="mt-40">
+                            <div class="mb-28">
+                                <div class="h5 text-uppercase text-center">Description</div>
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi quis eleifend quam adipiscing vitae proin. Tristique senectus et netus et malesuada fames. Adipiscing elit ut aliquam purus sit amet luctus venenatis. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Nec sagittis aliquam malesuada bibendum arcu vitae elementum. Mi sit amet mauris commodo quis imperdiet massa tincidunt. Dictum at tempor commodo ullamcorper. Dolor morbi non arcu risus quis. Tortor dignissim convallis aenean et tortor at risus viverra. Lectus sit amet est placerat in. Faucibus turpis in eu mi bibendum. Lectus nulla at volutpat diam ut. Vivamus at augue eget arcu dictum varius duis at. Laoreet id donec ultrices tincidunt arcu non.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <div class="d-flex gap-12 col-12  col-lg-6 mx-auto">
+                            
+                                <div class="d-grid col">
+                                    <a class="btn btn-primary text-uppercase text-white  " href="upload-file.html"  >
+                                        Go To Upload
+                                    </a>
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="modal fade" id="modalUnlock" tabindex="-1">
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content shadow">
@@ -720,5 +1033,11 @@
         <script src="assets/js/plugin/swiper.min.js?v=5.4.3"></script>
         <script src="assets/js/plugin/ofi.min.js?v=3.2.4"></script>
         <script src="assets/js/custom.js"></script>
+        <script>
+            // var myModal = new bootstrap.Modal(document.getElementById("modalMission"), {});
+            // document.onreadystatechange = function () {
+            //     myModal.show();
+            // };
+        </script>
     </body>
 </html>
