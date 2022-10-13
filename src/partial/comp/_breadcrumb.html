@@ -1,0 +1,14 @@
+<div>
+    <div class="container py-20">
+        <ol class="breadcrumb fs-small text-uppercase">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            @@if(context.b2Href){
+            <li class="breadcrumb-item"><a href="@@b2Href">@@b2Label</a></li>
+            }
+            @@if(context.b3Href){
+            <li class="breadcrumb-item"><a href="@@b3Href">@@b3Label</a></li>
+            }
+            <li class="breadcrumb-item active">@@activeLabel</li>
+        </ol>
+    </div>
+</div>

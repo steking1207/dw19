@@ -1,14 +1,13 @@
 <div>
-    <div class="container py-80">
-        @@include('../../unit/_section-title.html',{
+    <div class="container pb-80">
+        <!-- @@include('../../unit/_section-title.html',{
             title1:'G',
             title2:'ift',
         })
-        <hr class="border-top border-secondary">
-        <div class="row mt-80">
+        <hr class="border-top border-secondary"> -->
+        <div class="row">
             <div class="col-12 col-lg-10">
-                @@include('../../comp/_pagination.html')
-                <div class="row g-12 g-lg-20 mt-20 mb-40">
+                <div class="row g-12 g-lg-20 mb-40">
                     @@loop('unit/_list-item.html', [
                         {img:'assets/img/uploads/prod-01.jpg', title:'Apple Watch Series 7', pMin:'60,000', pMax:'70,000', icon:'heart'},
                         {img:'assets/img/uploads/prod-02.jpg', title:'Roborock S7 MaxV Ultra Vacuum cleaner', pMin:'20,000', pMax:'24,000', icon:'heart-fill'},
@@ -35,16 +34,18 @@
                 @@include('../../comp/_pagination.html')
             </div>
             <div class="col-12 col-lg-2 order-lg-first">
-                <div class="h5 mb-20">
-                    Categories
-                </div>
-                <div>
-                    @@loop('unit/_sidebar-item.html', [
-                        {id:'3c', label:'3C',},
-                        {id:'Sport', label:'Sport',},
-                        {id:'Hp', label:'Household Appliances',},
-                        {id:'Shoes', label:'Shoes',},
-                    ])
+                <div id="sidebar">
+                    <div class="h5 mb-20">
+                        Categories
+                    </div>
+                    <div>
+                        @@loop('unit/_sidebar-item.html', [
+                            {id:'3c', label:'3C',},
+                            {id:'Sport', label:'Sport',},
+                            {id:'Hp', label:'Household Appliances',},
+                            {id:'Shoes', label:'Shoes',},
+                        ])
+                    </div>
                 </div>
             </div>
         </div>

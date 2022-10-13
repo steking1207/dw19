@@ -10,6 +10,27 @@
             nav5Label:'Check Gift',
         })
         <main>
+            <div class="bg-light">
+                <div class="container py-lg-60 py-40">
+                    <div class="text-center mb-20">
+                        <div class="h4">GIFT</div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-8">
+                            <div class="input-group input-group-lg">
+                                <input type="text" class="form-control" placeholder="Search">
+                                <button class="btn btn-secondary" type="button">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            @@include('../partial/comp/_breadcrumb.html',{
+                activeLabel:'Gift Center',
+            })
             @@include('../partial/page/gift/_list.html')
         </main>
         @@include('../partial/global/_footer.html')
@@ -19,5 +40,22 @@
         @@include('../partial/modal/_unlock.html')
         <!-- global -->
         @@include('../partial/global/_js.html')
+        <script>
+             jQuery(document).ready(function($){
+
+                $('#sidebar').hcSticky({
+                    // innerSticker: '.ad',
+                    followScroll: false,
+                    top:120,
+                });
+                $('#breadcrumb').hcSticky({
+                    // followScroll: false,
+                    top:120,
+                });
+            });
+
+
+
+        </script>
     </body>
 </html>

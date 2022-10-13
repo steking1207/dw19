@@ -1,5 +1,13 @@
 body {
     letter-spacing: 0.03em;
+    @include media-breakpoint-down(lg) {
+        font-size: rfs-fluid-value(0.9rem);
+    }
+}
+.btn {
+    @include media-breakpoint-down(lg) {
+        font-size: rfs-fluid-value(0.8rem);
+    }
 }
 .fs-small {
     font-size: $small-font-size;

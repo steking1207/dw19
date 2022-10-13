@@ -7,7 +7,7 @@
         <div class="row my-36">
             @@loop('unit/_mission-item.html', [
                 {
-                    img:'https://via.placeholder.com/80x80',
+                    img:'https://via.placeholder.com/120x120',
                     title:'Mission Name Mission Name',
                     desc:'Mission description Lorem Mission description Mission descriptionMission description',
                     progress:'10',
@@ -40,6 +40,8 @@
                 },
             ])
         </div>
-        @@include('../../unit/_btn-more.html')
+        @@include('../../unit/_btn-more.html',{
+            href:'#'
+        })
     </div>
 </div>

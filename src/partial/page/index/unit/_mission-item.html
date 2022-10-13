@@ -1,13 +1,16 @@
 <div class="col-12 col-lg-6 my-12">
     <div class="border">
-        <div class="p-16">
+        <a class="position-relative d-block p-16 btn-hover-shadow text-decoration-none" href="javscript:void();" data-bs-toggle="modal" data-bs-target="#modalMission">
+            <div class="d-lg-none d-block">
+                <div class="triangle-rt position-absolute top-0 end-0"></div>
+            </div>
             <div class="row gx-12 gy-24 row-cols-2">
-                <div class="col-4 col-lg-2">
-                    <img class="of-contain wh-80 mx-auto" src="@@img" alt="@@title">
+                <div class="col-4 col-lg-3 d-none d-lg-flex">
+                    <img class="of-contain h-120 mx-auto" src="@@img" alt="@@title">
                 </div>
-                <div class="col-8 col-lg-10">
+                <div class="col-12 col-lg-9">
                     <div class="h5 text-row-1 mb-4">
-                        <a class="text-decoration-none" href="javscript:void();" data-bs-toggle="modal" data-bs-target="#modalMission">@@title</a>
+                        @@title
                     </div>
                     <div class="text-secondary text-row-2">
                         @@desc
@@ -28,15 +31,17 @@
                             }
                         </div>
                     </div>
-                    <div class="text-start">
-                        <small>
-                            <div class="d-block d-lg-inline">Expire in <span class="text-danger">22</span> days</div>
-                            <div class="d-none d-lg-inline">|</div>
-                            <div class="d-block d-lg-inline">Until <span class="text-danger">30/09/2022</span></div>
-                        </small>
+                    <div class="text-end text-secondary">
+                        <div class="fs-small">
+                            <small>
+                                <div class="d-inline">Expire in <span class="text-danger">22</span> days</div>
+                                <div class="d-inline">|</div>
+                                <div class="d-inline">Until <span class="text-danger">30/09/2022</span></div>
+                            </small>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
 </div>
