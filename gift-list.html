@@ -100,44 +100,40 @@
         </header>
 
         <main>
-            <div>
-                <div class="container py-80">
-                    <div class="h1 text-uppercase text-center">
-                        <span class="text-primary">G</span><span class="text-ci-dark">ift</span>
+            <div class="bg-light">
+                <div class="container py-lg-60 py-40">
+                    <div class="text-center mb-20">
+                        <div class="h4">GIFT</div>
                     </div>
-                    <hr class="border-top border-secondary">
-                    <div class="row mt-80">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-8">
+                            <div class="input-group input-group-lg">
+                                <input type="text" class="form-control" placeholder="Search">
+                                <button class="btn btn-secondary" type="button">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="container py-20">
+                    <ol class="breadcrumb fs-small text-uppercase">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        
+                        
+                        <li class="breadcrumb-item active">Gift Center</li>
+                    </ol>
+                </div>
+            </div>
+            <div>
+                <div class="container pb-80">
+                    
+                    <div class="row">
                         <div class="col-12 col-lg-10">
-                            <nav>
-                                <ul class="pagination justify-content-center">
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">
-                                            <span aria-hidden="true"><i class="bi bi-chevron-bar-left"></i></span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">
-                                            <span aria-hidden="true"><i class="bi bi-chevron-left"></i></span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item"><a class="page-link active" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">
-                                            <span aria-hidden="true"><i class="bi bi-chevron-right"></i></span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">
-                                            <span aria-hidden="true"><i class="bi bi-chevron-bar-right"></i></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <div class="row g-12 g-lg-20 mt-20 mb-40">
+                            <div class="row g-12 g-lg-20 mb-40">
                                 <div class="col-6 col-lg-3">
                                     <div class="position-relative p-8 p-lg-16 border btn-hover-shadow">
                                         <a class="d-block text-decoration-none text-center" href="gift-detail.html">    
@@ -531,30 +527,32 @@
                             </nav>
                         </div>
                         <div class="col-12 col-lg-2 order-lg-first">
-                            <div class="h5 mb-20">
-                                Categories
-                            </div>
-                            <div>
-                                <div class="form-check mb-20">
-                                    <input class="form-check-input" type="checkbox" value="" id="cat3c">
-                                    <label class="form-check-label" for="cat3c">
-                                        3C
-                                    </label>
-                                </div><div class="form-check mb-20">
-                                    <input class="form-check-input" type="checkbox" value="" id="catSport">
-                                    <label class="form-check-label" for="catSport">
-                                        Sport
-                                    </label>
-                                </div><div class="form-check mb-20">
-                                    <input class="form-check-input" type="checkbox" value="" id="catHp">
-                                    <label class="form-check-label" for="catHp">
-                                        Household Appliances
-                                    </label>
-                                </div><div class="form-check mb-20">
-                                    <input class="form-check-input" type="checkbox" value="" id="catShoes">
-                                    <label class="form-check-label" for="catShoes">
-                                        Shoes
-                                    </label>
+                            <div id="sidebar">
+                                <div class="h5 mb-20">
+                                    Categories
+                                </div>
+                                <div>
+                                    <div class="form-check mb-20">
+                                        <input class="form-check-input" type="checkbox" value="" id="cat3c">
+                                        <label class="form-check-label" for="cat3c">
+                                            3C
+                                        </label>
+                                    </div><div class="form-check mb-20">
+                                        <input class="form-check-input" type="checkbox" value="" id="catSport">
+                                        <label class="form-check-label" for="catSport">
+                                            Sport
+                                        </label>
+                                    </div><div class="form-check mb-20">
+                                        <input class="form-check-input" type="checkbox" value="" id="catHp">
+                                        <label class="form-check-label" for="catHp">
+                                            Household Appliances
+                                        </label>
+                                    </div><div class="form-check mb-20">
+                                        <input class="form-check-input" type="checkbox" value="" id="catShoes">
+                                        <label class="form-check-label" for="catShoes">
+                                            Shoes
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -703,13 +701,13 @@
                         <div class="d-flex gap-12 col-12  col-lg-6 mx-auto">
                             
                                 <div class="d-grid col">
-                                    <a class="btn btn-outline-secondary text-uppercase   " href="#" data-bs-dismiss="modal" >
+                                    <a class="btn btn-outline-secondary text-uppercase    " href="#" data-bs-dismiss="modal" >
                                         Do it later
                                     </a>
                                 </div>
                             
                                 <div class="d-grid col">
-                                    <a class="btn btn-primary text-uppercase text-white  " href="account.html"  >
+                                    <a class="btn btn-primary text-uppercase text-white   " href="account.html"  >
                                         Link Now
                                     </a>
                                 </div>
@@ -722,7 +720,25 @@
         
         <script src="assets/js/plugin/bootstrap.bundle.min.js?v=5.2.0-beta1"></script>
         <script src="assets/js/plugin/swiper.min.js?v=5.4.3"></script>
+        <script src="assets/js/plugin/hc-sticky.js?v=2.2.7"></script>
         <script src="assets/js/plugin/ofi.min.js?v=3.2.4"></script>
         <script src="assets/js/custom.js"></script>
+        <script>
+             jQuery(document).ready(function($){
+
+                $('#sidebar').hcSticky({
+                    // innerSticker: '.ad',
+                    followScroll: false,
+                    top:120,
+                });
+                $('#breadcrumb').hcSticky({
+                    // followScroll: false,
+                    top:120,
+                });
+            });
+
+
+
+        </script>
     </body>
 </html>

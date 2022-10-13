@@ -43,8 +43,26 @@ body.scroll-hidden {
   .rect.rect-activity {
     left: 55%; }
 
+.triangle-rt {
+  position: relative; }
+  .triangle-rt:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 16px 16px 0;
+    border-color: transparent #0092db transparent transparent; }
+
 body {
   letter-spacing: 0.03em; }
+  @media (max-width: 991.98px) {
+    body {
+      font-size: 0.9rem; } }
+
+@media (max-width: 991.98px) {
+  .btn {
+    font-size: 0.8rem; } }
 
 .fs-small {
   font-size: 0.875em; }
@@ -317,6 +335,9 @@ footer a.text-white:hover, footer a.text-white:focus {
   height: 3em; }
 
 .h-160 {
+  height: 160px !important; }
+
+.h-120 {
   height: 160px !important; }
 
 .h-220 {
