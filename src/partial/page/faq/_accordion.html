@@ -1,0 +1,9 @@
+<div class="mb-40 mb-lg-60">
+    <a id="faq@@pid"></a>
+    <h5 class="h5 text-ci-dark mb-24">@@title</h5>
+    <div class="accordion" id="accordionFaq@@pid">
+        @@for (var i = 0; i < group.item.length; i++) {
+            @@include('unit/_accordion-item.html', `+(JSON.stringify(group.item[i]))+`)
+        }
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="modal fade" id="modalBadge" tabindex="-1">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content shadow">
+            <div class="modal-body py-40">
+                <div class="position-absolute top-0 end-0 me-4 mt-4">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-toggle="modal"></button>
+                </div>
+                <div class="mb-40 text-center">
+                    <div class="mb-20">
+                        <img class="of-contain h-220" src="https://via.placeholder.com/640x640/ccf?text=1:1" alt="">
+                    </div>
+                    You’ve earn Achievement
+                    <div class="text-ci-dark h4 m-0">DW Trader</div>
+                    for <span class="text-primary">Send 1 Receipt</span><br>
+                    And gain bonus <span class="text-danger">5</span>Points
+                </div>
+                @@include('../comp/_btn-group.html',{
+                    col:'-12', colLg:'-6',
+                    group: {
+                        item: [
+                            {btnStyle:'primary', btnColor:'white', btnHref:'#', btnLabel:'OK', dismiss:'true',},
+                        ],
+                    },
+                })
+            </div>
+        </div>
+    </div>
+</div>

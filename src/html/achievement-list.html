@@ -1,0 +1,64 @@
+@@include('../partial/global/_head.html',{title:'Achievement'})
+    <body id="top">
+        @@include('../partial/global/_header.html',{
+            state:'logged',
+            nav1Label:'Mission',
+            nav1Badge:true,
+            nav2Label:'Promotion',
+            nav3Label:'News & Announvement',
+            nav4Label:'learn about DW',
+            nav5Label:'Check Gift',
+        })
+        <main>
+            <div>
+                <div class="container py-80">
+                    @@include('../partial/unit/_section-title.html',{
+                        title1:'A',
+                        title2:'chievement',
+                    })
+                    <div class="swiper swiper-badge col-12 col-lg-10 mt-20 mt-lg-40">
+                        <div class="swiper-wrapper">
+                            @@loop('../partial/page/achievement/unit/_badge-list-item.html', [
+                                {badge:true, img:'assets/img/uploads/badge-01.png', label:'Achievement Name'},
+                                {badge:false, img:'assets/img/uploads/badge-02.png', label:'Achievement Name Achievement Name'},
+                                {badge:true, img:'https://via.placeholder.com/1920x640/00f?text=Wide size', label:'Gold'},
+                                {badge:true, img:'https://via.placeholder.com/640x640/ccf?text=1:1', label:'Achievement Name Achievement Name'},
+                                {badge:true, img:'https://via.placeholder.com/640x980/fb1?text=Long size', label:'Achievement Name Achievement Name'},
+                                {badge:false, img:'assets/img/uploads/badge-03.png', label:'Achievement Name'},
+                                {badge:false, img:'assets/img/uploads/badge-04.png', label:'Achievement Name Achievement Name'},
+                                {badge:true, img:'assets/img/uploads/badge-01.png', label:'Achievement Name'},
+                                {badge:true, img:'assets/img/uploads/badge-04.png', label:'Achievement'},
+                                {badge:true, img:'https://via.placeholder.com/640x640/ccf?text=1:1', label:'Achievement Name Achievement Name'},
+                                {badge:true, img:'assets/img/uploads/badge-01.png', label:'Achievement Name'},
+                                {badge:false, img:'assets/img/uploads/badge-02.png', label:'Achievement Name Achievement Name'},
+                                {badge:true, img:'https://via.placeholder.com/1920x640/00f?text=Wide size', label:'Gold'},
+                                {badge:true, img:'https://via.placeholder.com/640x640/ccf?text=1:1', label:'Achievement Name Achievement Name'},
+                                {badge:true, img:'https://via.placeholder.com/640x980/fb1?text=Long size', label:'Achievement Name Achievement Name'},
+
+                                {badge:false, img:'assets/img/uploads/badge-01.png', label:'P2-1'},
+                                {badge:false, img:'assets/img/uploads/badge-02.png', label:'P2-2'},
+                                {badge:false, img:'assets/img/uploads/badge-03.png', label:'p2-3'},
+                                {badge:false, img:'assets/img/uploads/badge-04.png', label:'P2-4'},
+                                {badge:false, img:'https://via.placeholder.com/640x640/ccf?text=1:1', label:'P2-5'},
+                                {badge:false, img:'assets/img/uploads/badge-01.png', label:'Achievement Name'},
+                                {badge:false, img:'assets/img/uploads/badge-02.png', label:'Achievement Name Achievement Name'},
+                                {badge:false, img:'assets/img/uploads/badge-03.png', label:'Achievement Name'},
+                                {badge:false, img:'assets/img/uploads/badge-04.png', label:'Achievement'},
+                                {badge:false, img:'https://via.placeholder.com/640x640/ccf?text=1:1', label:'Achievement Name Achievement Name'},
+                            ])
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @@include('../partial/global/_footer.html')
+        @@include('../partial/comp/_banner.html')
+        @@include('../partial/comp/_quicknav.html')
+
+        @@include('../partial/modal/_unlock.html')
+        @@include('../partial/modal/_badge.html')
+        <!-- global -->
+        @@include('../partial/global/_js.html')
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<div class="swiper-slide text-center py-4 py-lg-12">
+    @@if(context.badge===true){
+    <a class="text-decoration-none" href="javscript:void();" data-bs-toggle="modal" data-bs-target="#modalBadge">
+    }
+    @@if(context.badge!==true){
+    <div class="opacity-25">
+    }
+        <img class="of-contain h-120" src="@@img" alt="@@label">
+        <div class="mt-12 text-dark text-row-1">@@label</div>
+    @@if(context.badge===true){
+    </a>
+    }
+    @@if(context.badge!==true){
+    </div>
+    }
+</div>

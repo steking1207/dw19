@@ -1,0 +1,79 @@
+<div>
+    <div class="container pb-80">
+        <!-- @@include('../../unit/_section-title.html',{
+            title1:'G',
+            title2:'ift',
+        })
+        <hr class="border-top border-secondary"> -->
+        <div class="row">
+            <div class="col-12 col-lg-10">
+                @@include('_accordion.html',{
+                    pid:'1',
+                    title:'Popular questions',
+                    group: {
+                        item: [
+                            {
+                                pid:'1', id:'1-1', show:true,
+                                title:'Popular question 1',
+                                desc:'<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                            },
+                            {
+                                pid:'1', id:'1-2',
+                                title:'Popular question 2',
+                                desc:'<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                            },
+                        ],
+                    },
+                })
+                @@include('_accordion.html',{
+                    pid:'2',
+                    title:'How to get points',
+                    group: {
+                        item: [
+                            {
+                                pid:'2', id:'2-1', show:true,
+                                title:'How to get points 1',
+                                desc:'<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                            },
+                            {
+                                pid:'2', id:'2-2',
+                                title:'How to get points 2',
+                                desc:'<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                            },
+                        ],
+                    },
+                })
+                @@include('_accordion.html',{
+                    pid:'3',
+                    title:'How to upload',
+                    group: {
+                        item: [
+                            {
+                                pid:'3', id:'3-1', show:true,
+                                title:'How to upload 1',
+                                desc:'<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                            },
+                            {
+                                pid:'3', id:'3-2',
+                                title:'How to upload 2',
+                                desc:'<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                            },
+                        ],
+                    },
+                })
+
+            </div>
+            <div class="col-12 col-lg-2 order-first">
+                <div id="sidebar">
+                    <div class="list-group list-group-flush mb-40 mb-lg-0">
+                        @@loop('unit/_sidebar-item.html', [
+                            {href:'#faq1', icon:'book', label:'Popular question',},
+                            {href:'#faq2', icon:'question-square', label:'How to get points',},
+                            {href:'#faq3', icon:'upload', label:'How to upload',},
+                        ])
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

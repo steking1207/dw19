@@ -4,6 +4,14 @@ body {
     }
 }
 
+a {
+    &:hover {
+        img {
+            @include transition(all 0.2s ease);
+            opacity: .8 !important;
+        }
+    }
+}
 .container {
     position: relative;
 }

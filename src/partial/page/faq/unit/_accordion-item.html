@@ -1,0 +1,12 @@
+<div class="accordion-item">
+    <div class="accordion-header">
+        <button class="accordion-button @@if(context.show!==true){collapsed}" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq@@id">
+            @@title
+        </button>
+    </div>
+    <div id="collapseFaq@@id" class="accordion-collapse collapse @@if(context.show===true){show}" data-bs-parent="#accordionFaq@@pid">
+        <div class="accordion-body">
+            @@desc
+        </div>
+    </div>
+</div>

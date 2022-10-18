@@ -116,3 +116,13 @@
     top: -60px; 
     visibility: hidden;
 }
+.btn-class {
+    background: url(#{$path-ui}bg-class.png) center no-repeat;
+    background-size: contain;
+    a {
+        &:hover,
+        &:focus {
+            text-decoration: none !important;
+        }
+    }
+}

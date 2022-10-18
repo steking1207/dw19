@@ -1,0 +1,70 @@
+@@include('../partial/global/_head.html',{title:'Learn About DW'})
+    <body id="top">
+        @@include('../partial/global/_header.html',{
+            state:'login',
+            nav1Label:'DW19 Membership Benefit',
+            nav2Label:'Promotion',
+            nav3Label:'Learn About DW',
+            nav4Label:'Check Gift',
+            navQuizLabel:'Go To Test',
+        })
+        <main>
+            @@include('../partial/comp/_searchbar.html',{
+                title:'What do you want to know about DW?',
+                placeholder:'Search'
+            })
+            @@include('../partial/comp/_breadcrumb.html',{
+                activeLabel:'Learn About DW',
+            })
+            <div>
+                <div class="container pb-80">
+                    <div class="swiper swiper-class col-12 col-lg-10">
+                        <div class="swiper-wrapper">
+                            @@loop('../partial/page/classroom/unit/_class-list-item.html', [
+                                {title: 'Lorem ipsum dolor sit amet Lorem'},
+                                {title: 'DW Basic For Beginner'},
+                                {title: 'DW Advance Technique'},
+                                {title: 'FAQ About DW'},
+                            ])
+                        </div>
+                        <div class="swiper-button-prev text-white mt-4"></div>
+                        <div class="swiper-button-next text-white mt-4"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="container pb-80">
+                    <div class="row">
+                        @@loop('../partial/page/classroom/unit/_article-list-item.html', [
+                        {
+                            img:'assets/img/uploads/img-act-01.jpg',
+                            date:'2022.10.15',
+                            title:'A sell-off in Amazon shares',
+                            desc:'A sell-off in Amazon shares, after the firm reported a fall in online sales, helped drive the Nasdaq index down more than 4% on Friday.'
+                        },
+                        {
+                            img:'assets/img/uploads/img-act-02.jpg',
+                            date:'2022.09.02',
+                            title:'A sell-off in Amazon shares A sell-off in Amazon shares',
+                            desc:'A sell-off in Amazon shares, after the firm reported a'
+                        },
+                        {
+                            img:'assets/img/uploads/img-act-03.jpg',
+                            date:'2022.08.21',
+                            title:'A sell-off in Amazon shares A sell-off in Amazon shares',
+                            desc:'A sell-off in Amazon shares, after the firm reported a A sell-off in Amazon shares'
+                        },
+                        ])
+                    </div>
+                </div>
+            </div>
+        </main>
+        @@include('../partial/global/_footer.html')
+        @@include('../partial/comp/_banner.html')
+        @@include('../partial/comp/_quicknav.html')
+
+        @@include('../partial/modal/_unlock.html')
+        <!-- global -->
+        @@include('../partial/global/_js.html')
+    </body>
+</html>

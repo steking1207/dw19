@@ -7,6 +7,33 @@
         <hr class="border-top border-secondary"> -->
         <div class="row">
             <div class="col-12 col-lg-10">
+                <div class="d-flex justify-content-between mb-20">
+                    <div class="row align-items-center g-8">
+                        <label class="col-auto col-form-label">Sort</label>
+                        <div class="col">
+                            <select class="form-select form-select-sm">
+                                <option value="" selected>Featured</option>
+                                <option value="">Most Viewed</option>
+                                <option value="">New Arrivals</option>
+                                <option value="">Price (high to low)</option>
+                                <option value="">Price (low to high)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row align-items-center g-8">
+                        <div class="col">1/50</div>
+                        <div class="col">
+                            <div class="btn-group btn-group-sm">
+                                <button type="button" class="btn btn-outline-secondary">
+                                    <i class="bi bi-caret-left-fill"></i>
+                                </button>
+                                <button type="button" class="btn btn-outline-secondary">
+                                    <i class="bi bi-caret-right-fill"></i>
+                                </button>
+                              </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row g-12 g-lg-20 mb-40">
                     @@loop('unit/_list-item.html', [
                         {img:'assets/img/uploads/prod-01.jpg', title:'Apple Watch Series 7', pMin:'60,000', pMax:'70,000', icon:'heart'},

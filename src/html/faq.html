@@ -1,23 +1,22 @@
-@@include('../partial/global/_head.html',{title:'Gift'})
+@@include('../partial/global/_head.html',{title:'FAQ'})
     <body id="top">
         @@include('../partial/global/_header.html',{
-            state:'logged',
-            nav1Label:'Mission',
-            nav1Badge:'99+',
+            state:'login',
+            nav1Label:'DW19 Membership Benefit',
             nav2Label:'Promotion',
-            nav3Label:'News & Announvement',
-            nav4Label:'learn about DW',
-            nav5Label:'Check Gift',
+            nav3Label:'Learn About DW',
+            nav4Label:'Check Gift',
+            navQuizLabel:'Go To Test',
         })
         <main>
             @@include('../partial/comp/_searchbar.html',{
-                title:'GIFT',
+                title:'Hello, How can I Help You?',
                 placeholder:'Search'
             })
             @@include('../partial/comp/_breadcrumb.html',{
-                activeLabel:'Gift Center',
+                activeLabel:'FAQ',
             })
-            @@include('../partial/page/gift/_list.html')
+            @@include('../partial/page/faq/_list.html')
         </main>
         @@include('../partial/global/_footer.html')
         @@include('../partial/comp/_banner.html')
