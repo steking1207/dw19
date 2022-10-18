@@ -1,17 +1,15 @@
 ### 2022/10/18
-#### Index (<a href="https://steking1207.github.io/dw19/index-logged.html" target="_blank">連結</a>)
-- Mission 樣式調整
 #### 調整頁面
-- Index (<a href="https://steking1207.github.io/dw19/index-logged.html" target="_blank">連結</a>)
-    Mission 樣式調整
-- Gift-列表 (<a href="https://steking1207.github.io/dw19/gift-list.html" target="_blank">連結</a>)
-    增加排序/頁數功能
-    左側選單捲動時固定
+* Index (<a href="https://steking1207.github.io/dw19/index-logged.html" target="_blank">連結</a>)
+    - Mission 樣式調整
+* Gift-列表 (<a href="https://steking1207.github.io/dw19/gift-list.html" target="_blank">連結</a>)
+    - 增加排序/頁數功能
+    - 左側選單捲動時固定
 #### 新增頁面
-- Classroom-列表 (<a href="https://steking1207.github.io/dw19/classroom-list.html" target="_blank">連結</a>)
-- Classroom-內容 (<a href="https://steking1207.github.io/dw19/classroom-list.html" target="_blank">連結</a>)
-- FAQ (<a href="https://steking1207.github.io/dw19/faq.html" target="_blank">連結</a>)
-- Achievement (<a href="https://steking1207.github.io/dw19/achievement-list.html" target="_blank">連結</a>)
+* Classroom-列表 (<a href="https://steking1207.github.io/dw19/classroom-list.html" target="_blank">連結</a>)
+* Classroom-內容 (<a href="https://steking1207.github.io/dw19/classroom-list.html" target="_blank">連結</a>)
+* FAQ (<a href="https://steking1207.github.io/dw19/faq.html" target="_blank">連結</a>)
+* Achievement (<a href="https://steking1207.github.io/dw19/achievement-list.html" target="_blank">連結</a>)
 ---
 ### 2022/09/29
 #### DW19 MissionsUI.ppt (<a href="https://steking1207.github.io/dw19/index-logged.html" target="_blank">連結</a>)
