@@ -7,7 +7,7 @@
     - 左側選單捲動時固定
 #### 新增頁面
 * Classroom-列表 (<a href="https://steking1207.github.io/dw19/classroom-list.html" target="_blank">連結</a>)
-* Classroom-內容 (<a href="https://steking1207.github.io/dw19/classroom-list.html" target="_blank">連結</a>)
+* Classroom-內容 (<a href="https://steking1207.github.io/dw19/classroom-detail.html" target="_blank">連結</a>)
 * FAQ (<a href="https://steking1207.github.io/dw19/faq.html" target="_blank">連結</a>)
 * Achievement (<a href="https://steking1207.github.io/dw19/achievement-list.html" target="_blank">連結</a>)
 ---
