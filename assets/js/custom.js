@@ -28,6 +28,48 @@ const swiperProd = new Swiper(".swiper-product", {
         },
     },
 });
+const swiperBadge = new Swiper(".swiper-badge", {
+    spaceBetween: 24,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 3,
+            slidesPerColumn: 3,
+            slidesPerGroup: 3,
+            slidesPerColumnFill: 'row',
+            watchOverflow: true,
+        },
+        1024: {
+            slidesPerView: 5,
+            slidesPerGroup: 5,
+            slidesPerColumn: 3,
+            slidesPerColumnFill: 'row',
+            watchOverflow: true,
+        },
+    },
+});
+const swiperClass = new Swiper(".swiper-class", {
+    spaceBetween: 24,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            slidesPerColumn: 1,
+        },
+        1024: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            slidesPerColumn: 1,
+        },
+    },
+});
 
 var clicked = 0;
 $(".toggle-password").click(function (e) {
@@ -49,6 +91,13 @@ $(".toggle-password").click(function (e) {
 });
 
 $(document).ready(function() {
+
+    $('#sidebar').hcSticky({
+        // innerSticker: '.ad',
+        followScroll: false,
+        top:120,
+    });
+    
     $(".form-select").change(function() {
         $(this).find("option:selected").each(function() {
             var optionValue = $(this).attr("value");
@@ -63,6 +112,14 @@ $(document).ready(function() {
 });
 
 $(function () {
+
+    $('.btn-anchor').click(function(){
+		$('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top -120
+    }, 500);
+		return false;
+	});
+
     // js:ofi
     objectFitImages('img.of-cover');
     $('img.of-cover').css('opacity',1);
