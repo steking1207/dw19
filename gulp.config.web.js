@@ -14,7 +14,7 @@ module.exports = {
         ],
         exportPath: `./dist/${baseName}/assets/img/`
     },
-    scripts: {
+    js: {
         sourcePaths: [
             `./src/js/${baseName}/**/*.js`
         ],
