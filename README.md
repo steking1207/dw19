@@ -1,3 +1,17 @@
+### 2022/10/31
+#### 調整頁面
+* Index (<a href="https://steking1207.github.io/dw19/index-logged.html" target="_blank">連結</a>)
+    - Mission 下拉排版調整
+    - Mission Popup 列表Icon位置修正
+* FAQ (<a href="https://steking1207.github.io/dw19/faq.html" target="_blank">連結</a>)
+    - 搜尋區塊底色調整
+* Classroom-列表 (<a href="https://steking1207.github.io/dw19/classroom-list.html" target="_blank">連結</a>)
+    - 搜尋區塊底色調整
+    - 分類區域縮小，點選範圍增大
+* Classroom-內容 (<a href="https://steking1207.github.io/dw19/classroom-detail.html" target="_blank">連結</a>)
+    - 移除搜尋區塊
+    - 麵包屑調整
+---
 ### 2022/10/18
 #### 調整頁面
 * Index (<a href="https://steking1207.github.io/dw19/index-logged.html" target="_blank">連結</a>)

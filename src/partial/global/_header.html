@@ -25,20 +25,20 @@
                                     <span class="position-absolute top-0 end-0 mt-4 mt-xl-0 me-4 badge text-bg-danger rounded-pill">99+</span>
                                 </a>
                                 <div class="dropdown-menu shadow" style="min-width: 360px;">
-                                    <div class="d-flex align-items-center justify-content-between px-8 py-4">
+                                    <div class="d-flex align-items-center justify-content-between px-16 py-4">
                                         <div class="h5 m-0">Notification</div>
                                         <a class="btn btn-sm btn-outline-primary rounded" href="#">Mark all as read</a>
                                     </div>
                                     <hr class="dropdown-divider mb-0">
                                     <div class="list-group list-group-flush">
-                                        <a href="#" class="list-group-item list-group-item-action list-group-item-primary text-center">
+                                        <a href="#" class="list-group-item bg-primary-normal text-center text-white">
                                             <i class="bi bi-house me-4"></i> Go to Mission Center
                                         </a>
                                         @@loop('../unit/_notification-item.html', [
                                             {
                                                 state:'new',
                                                 img:'https://via.placeholder.com/180x70/fc0',
-                                                label:'Your mission #1 Almost expire within 2 days',
+                                                label:'Your mission #1 Almost expire within 2 days Almost expire within 2 days',
                                             },
                                             {
                                                 state:'new',
@@ -47,7 +47,13 @@
                                             },
                                             {
                                                 state:'success',
+                                                img:'https://via.placeholder.com/360x360/c00',
                                                 label:'Congratulations! Mission #2 Completed',
+                                            },
+                                            {
+                                                state:'success',
+                                                img:'assets/img/uploads/badge-02.png',
+                                                label:'Congratulations!',
                                             },
                                         ])
                                     </div>
